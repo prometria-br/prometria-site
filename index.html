@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prometria | Produtos selecionados e ofertas inteligentes</title>
+  <meta name="description" content="Produtos selecionados por categoria e marketplace, cupons, achados úteis e grupos de ofertas inteligentes da Prometria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --white:#fff;
+      --bg:#fbfaff;
+      --soft:#f5f1ff;
+      --line:#ece5fb;
+      --text:#171321;
+      --muted:#6f687c;
+      --purple:#7c3cff;
+      --purple-dark:#5b20e8;
+      --lilac:#c084fc;
+      --cyan:#4ed8ff;
+      --green:#16a34a;
+      --shadow:0 20px 60px rgba(49,25,94,.12);
+      --shadow-soft:0 10px 32px rgba(49,25,94,.08);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Poppins,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 92% 2%,rgba(192,132,252,.18),transparent 31rem),
+        radial-gradient(circle at 0 12%,rgba(78,216,255,.13),transparent 28rem),
+        var(--white);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(100% - 32px,var(--max));margin-inline:auto}
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(34,17,74,.04);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:180px;
+    }
+
+    .brand img{
+      width:180px;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .brand-fallback{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .brand-mark{
+      width:42px;
+      height:42px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:800;
+      font-size:24px;
+      background:linear-gradient(135deg,var(--purple-dark),var(--purple),var(--cyan));
+      box-shadow:0 14px 30px rgba(124,60,255,.24);
+    }
+
+    .brand-name strong{
+      display:block;
+      line-height:1;
+      font-size:24px;
+      letter-spacing:-.05em;
+      background:linear-gradient(90deg,var(--purple-dark),var(--lilac),var(--cyan));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .brand-name span{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:10px;
+      text-align:center;
+      letter-spacing:.14em;
+      text-transform:lowercase;
+    }
+
+    .menu{
+      display:none;
+      align-items:center;
+      gap:22px;
+      color:#40364e;
+      font-size:14px;
+      font-weight:650;
+    }
+
+    .menu a:hover{color:var(--purple-dark)}
+
+    .actions{display:flex;align-items:center;gap:10px}
+
+    .mobile-toggle{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      color:var(--purple-dark);
+      cursor:pointer;
+    }
+
+    .mobile-menu{
+      display:none;
+      padding:0 0 16px;
+    }
+
+    .mobile-menu.open{display:block}
+
+    .mobile-menu a{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      color:#40364e;
+      font-weight:650;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      min-height:48px;
+      padding:13px 20px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font:inherit;
+      font-size:14px;
+      font-weight:750;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:.2s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--purple-dark),var(--purple),var(--lilac));
+      box-shadow:0 16px 34px rgba(124,60,255,.26);
+    }
+
+    .btn-secondary{
+      color:var(--purple-dark);
+      background:#fff;
+      border-color:rgba(124,60,255,.16);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .btn-soft{
+      color:var(--purple-dark);
+      background:#f4edff;
+      border-color:#eadcff;
+      box-shadow:none;
+    }
+
+    .desktop-cta{display:none}
+    .section{padding:76px 0}
+    .soft-section{
+      background:linear-gradient(180deg,rgba(248,246,255,.86),rgba(255,255,255,.94));
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero{
+      padding:58px 0 78px;
+      position:relative;
+      isolation:isolate;
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:700px;
+      height:700px;
+      right:-180px;
+      top:0;
+      border-radius:999px;
+      background:radial-gradient(circle,rgba(124,60,255,.13),rgba(78,216,255,.08),transparent 68%);
+      z-index:-1;
+    }
+
+    .hero-grid{
+      display:grid;
+      gap:44px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 13px;
+      border-radius:999px;
+      border:1px solid rgba(124,60,255,.16);
+      background:rgba(255,255,255,.86);
+      color:var(--purple-dark);
+      font-size:12px;
+      font-weight:800;
+      box-shadow:0 10px 26px rgba(124,60,255,.08);
+    }
+
+    .eyebrow:before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      box-shadow:0 0 0 5px rgba(124,60,255,.1);
+    }
+
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      margin:16px 0 18px;
+      max-width:720px;
+      font-size:clamp(39px,8vw,72px);
+      line-height:.98;
+      letter-spacing:-.064em;
+    }
+
+    h2{
+      margin-bottom:14px;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1.08;
+      letter-spacing:-.054em;
+    }
+
+    h3{letter-spacing:-.03em}
+
+    .gradient{
+      background:linear-gradient(105deg,var(--purple-dark),var(--purple),var(--lilac),#22bce6);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .lead{
+      max-width:650px;
+      color:var(--muted);
+      font-size:clamp(16px,2.2vw,19px);
+      line-height:1.75;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin:28px 0 24px;
+    }
+
+    .proof-grid{
+      display:grid;
+      gap:12px;
+      max-width:700px;
+    }
+
+    .proof{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.86);
+      color:#43384f;
+      font-size:13px;
+      font-weight:650;
+    }
+
+    .proof i{
+      width:18px;
+      height:18px;
+      display:grid;
+      place-items:center;
+      color:var(--purple-dark);
+      font-style:normal;
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height:500px;
+      display:grid;
+      place-items:center;
+    }
+
+    .preview{
+      width:min(100%,430px);
+      padding:18px;
+      border-radius:34px;
+      background:rgba(255,255,255,.72);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,.76);
+      box-shadow:0 30px 90px rgba(53,27,97,.22);
+    }
+
+    .preview-top{
+      padding:18px;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:linear-gradient(135deg,#f8f3ff,#fff);
+    }
+
+    .preview-top strong{
+      display:block;
+      font-size:18px;
+      letter-spacing:-.04em;
+    }
+
+    .preview-top span{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .preview-chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:14px;
+    }
+
+    .chip-mini{
+      padding:7px 10px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(124,60,255,.14);
+      color:var(--purple-dark);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .preview-list{
+      display:grid;
+      gap:12px;
+      padding-top:14px;
+    }
+
+    .preview-item{
+      display:grid;
+      grid-template-columns:62px 1fr;
+      gap:12px;
+      align-items:center;
+      padding:12px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow:0 10px 24px rgba(30,20,60,.05);
+    }
+
+    .preview-thumb{
+      width:62px;
+      height:62px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,rgba(124,60,255,.12),rgba(78,216,255,.12));
+      color:var(--purple-dark);
+      font-size:26px;
+    }
+
+    .preview-item strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:13px;
+    }
+
+    .preview-item span{
+      display:block;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .section-head{
+      max-width:780px;
+      margin-bottom:30px;
+    }
+
+    .section-head.center{
+      margin-inline:auto;
+      text-align:center;
+    }
+
+    .kicker{
+      margin-bottom:10px;
+      color:var(--purple-dark);
+      font-size:12px;
+      font-weight:850;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .section-lead{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.75;
+    }
+
+    .grid{display:grid;gap:16px}
+
+    .card{
+      position:relative;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.92);
+      box-shadow:0 12px 34px rgba(30,20,60,.05);
+      transition:.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+      border-color:rgba(124,60,255,.26);
+    }
+
+    .icon{
+      width:50px;
+      height:50px;
+      display:grid;
+      place-items:center;
+      margin-bottom:16px;
+      border-radius:16px;
+      color:var(--purple-dark);
+      background:linear-gradient(135deg,rgba(124,60,255,.11),rgba(78,216,255,.12));
+      font-size:23px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+      font-size:19px;
+    }
+
+    .card p{
+      margin-bottom:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .filters-panel{
+      padding:22px;
+      border-radius:32px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.9);
+      box-shadow:var(--shadow-soft);
+      margin-bottom:18px;
+    }
+
+    .filters-row{
+      display:grid;
+      gap:18px;
+    }
+
+    .filter-group strong{
+      display:block;
+      margin-bottom:10px;
+      font-size:13px;
+      color:#3c3349;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .filter-chip{
+      min-height:38px;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(124,60,255,.16);
+      background:#fff;
+      color:#463a55;
+      font-family:inherit;
+      font-size:12px;
+      font-weight:750;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .filter-chip:hover{transform:translateY(-1px)}
+    .filter-chip.active{
+      color:#fff;
+      border-color:transparent;
+      background:linear-gradient(135deg,var(--purple-dark),var(--purple),var(--lilac));
+      box-shadow:0 10px 24px rgba(124,60,255,.2);
+    }
+
+    .catalog-status{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+    }
+
+    .product-card{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      padding:0;
+      background:#fff;
+    }
+
+    .product-media{
+      position:relative;
+      height:190px;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(circle at 32% 18%,rgba(255,255,255,.95),transparent 6rem),
+        linear-gradient(135deg,rgba(124,60,255,.12),rgba(78,216,255,.12));
+    }
+
+    .product-img{
+      width:108px;
+      height:108px;
+      border-radius:32px;
+      display:grid;
+      place-items:center;
+      color:var(--purple-dark);
+      background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.44));
+      box-shadow:0 24px 44px rgba(124,60,255,.15);
+      font-size:42px;
+    }
+
+    .tag-row{
+      position:absolute;
+      top:14px;
+      left:14px;
+      right:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      min-height:30px;
+      padding:7px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.92);
+      box-shadow:0 10px 24px rgba(30,20,60,.08);
+      color:var(--purple-dark);
+      font-size:10px;
+      font-weight:850;
+      white-space:nowrap;
+    }
+
+    .badge.green{color:var(--green)}
+
+    .product-body{
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      padding:20px;
+    }
+
+    .product-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin-bottom:12px;
+    }
+
+    .meta{
+      padding:6px 9px;
+      border-radius:999px;
+      background:#f7f3ff;
+      color:var(--purple-dark);
+      font-size:11px;
+      font-weight:800;
+    }
+
+    .meta.source{
+      background:#eefaff;
+      color:#087a9b;
+    }
+
+    .product-title{
+      margin-bottom:8px;
+      font-size:18px;
+      line-height:1.25;
+    }
+
+    .product-desc{
+      flex:1;
+      margin-bottom:16px!important;
+    }
+
+    .product-actions{
+      display:grid;
+      gap:10px;
+    }
+
+    .note{
+      margin-top:18px;
+      padding:16px;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .category-grid,.store-grid,.steps-grid,.benefit-grid{grid-template-columns:1fr}
+
+    .store-card{
+      min-height:164px;
+      overflow:hidden;
+    }
+
+    .store-name{
+      display:inline-flex;
+      margin-bottom:10px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:#f6f0ff;
+      color:var(--purple-dark);
+      font-size:12px;
+      font-weight:850;
+    }
+
+    .cta-panel{
+      position:relative;
+      overflow:hidden;
+      padding:clamp(34px,7vw,62px);
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 92% 8%,rgba(78,216,255,.36),transparent 18rem),
+        linear-gradient(135deg,var(--purple-dark),var(--purple),var(--lilac));
+      color:#fff;
+      text-align:center;
+      box-shadow:0 26px 80px rgba(124,60,255,.28);
+    }
+
+    .cta-panel h2{max-width:790px;margin-inline:auto}
+    .cta-panel p{
+      max-width:720px;
+      margin:0 auto 24px;
+      color:rgba(255,255,255,.86);
+      line-height:1.75;
+    }
+
+    .cta-actions{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:12px;
+    }
+
+    .cta-panel .btn-primary{
+      color:var(--purple-dark);
+      background:#fff;
+      box-shadow:0 18px 34px rgba(45,15,90,.2);
+    }
+
+    .cta-panel .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.14);
+      border-color:rgba(255,255,255,.28);
+      box-shadow:none;
+    }
+
+    .faq-list{
+      max-width:900px;
+      margin-inline:auto;
+      display:grid;
+      gap:12px;
+    }
+
+    .faq-item{
+      overflow:hidden;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.9);
+      box-shadow:0 10px 26px rgba(30,20,60,.04);
+    }
+
+    .faq-button{
+      width:100%;
+      padding:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      border:0;
+      background:transparent;
+      color:var(--text);
+      font-family:inherit;
+      font-size:15px;
+      font-weight:850;
+      text-align:left;
+      cursor:pointer;
+    }
+
+    .faq-button span{
+      color:var(--purple-dark);
+      font-size:22px;
+      transition:.2s ease;
+    }
+
+    .faq-item.open .faq-button span{transform:rotate(45deg)}
+
+    .faq-content{
+      display:none;
+      padding:0 20px 20px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .faq-item.open .faq-content{display:block}
+
+    .footer{
+      padding:48px 0 28px;
+      border-top:1px solid var(--line);
+      background:var(--bg);
+    }
+
+    .footer-grid{
+      display:grid;
+      gap:28px;
+    }
+
+    .footer p{
+      max-width:460px;
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:18px;
+    }
+
+    .footer-col h3{
+      margin-bottom:10px;
+      font-size:14px;
+    }
+
+    .footer-col a{
+      display:block;
+      margin:9px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .footer-col a:hover{color:var(--purple-dark)}
+
+    .footer-bottom{
+      margin-top:28px;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .55s ease,transform .55s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media(min-width:560px){
+      .hero-actions,.cta-actions{flex-direction:row}
+      .proof-grid{grid-template-columns:repeat(3,1fr)}
+      .category-grid,.store-grid,.product-grid,.benefit-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-links{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media(min-width:860px){
+      .hero{padding:86px 0 92px}
+      .hero-grid{grid-template-columns:1.02fr .98fr}
+      .menu{display:flex}
+      .mobile-toggle{display:none}
+      .desktop-cta{display:inline-flex}
+      .mobile-menu{display:none!important}
+      .filters-row{grid-template-columns:1fr 1fr}
+      .steps-grid{grid-template-columns:repeat(4,1fr)}
+      .category-grid{grid-template-columns:repeat(4,1fr)}
+      .store-grid{grid-template-columns:repeat(5,1fr)}
+      .product-grid{grid-template-columns:repeat(3,1fr)}
+      .benefit-grid{grid-template-columns:repeat(3,1fr)}
+      .footer-grid{grid-template-columns:1.1fr .9fr}
+      .footer-links{grid-template-columns:repeat(3,1fr)}
+    }
+
+    @media(max-width:420px){
+      .container{width:min(100% - 24px,var(--max))}
+      .brand img{width:148px}
+      .brand-name strong{font-size:20px}
+      .hero-visual{min-height:460px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="#inicio" aria-label="Prometria - Início">
+          <!-- Coloque aqui o arquivo oficial da logo. Exemplo: <img src="assets/logo-prometria.png" alt="Prometria - ofertas inteligentes"> -->
+          <div class="brand-fallback">
+            <div class="brand-mark">P</div>
+            <div class="brand-name">
+              <strong>prometria</strong>
+              <span>ofertas inteligentes</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="menu">
+          <a href="#inicio">Início</a>
+          <a href="#catalogo">Produtos</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#plataformas">Sites</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#grupos">Grupos</a>
+          <a href="#duvidas">Dúvidas</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary desktop-cta" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo</a>
+          <button class="mobile-toggle" type="button" aria-label="Abrir menu" data-mobile-toggle>☰</button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" data-mobile-menu>
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Produtos</a>
+        <a href="#categorias">Categorias</a>
+        <a href="#plataformas">Sites</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#grupos">Grupos</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Vitrine de curadoria + grupos de ofertas</span>
+          <h1>Produtos selecionados para <span class="gradient">comprar melhor</span></h1>
+          <p class="lead">A Prometria organiza achados, cupons e produtos úteis por categoria e por plataforma, ajudando você a encontrar boas oportunidades e acompanhar tudo pelos grupos.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Ver produtos selecionados →</a>
+            <a class="btn btn-secondary" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no WhatsApp</a>
+            <a class="btn btn-secondary" href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Entrar no Telegram</a>
+          </div>
+
+          <div class="proof-grid">
+            <span class="proof"><i>✓</i> Separado por categorias</span>
+            <span class="proof"><i>✓</i> Filtrado por site</span>
+            <span class="proof"><i>✓</i> Avisos nos grupos</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="preview">
+            <div class="preview-top">
+              <strong>Catálogo Prometria</strong>
+              <span>Produtos por categoria e plataforma</span>
+              <div class="preview-chips">
+                <span class="chip-mini">Amazon</span>
+                <span class="chip-mini">Shopee</span>
+                <span class="chip-mini">ML</span>
+                <span class="chip-mini">AliExpress</span>
+                <span class="chip-mini">Magalu</span>
+              </div>
+            </div>
+
+            <div class="preview-list">
+              <article class="preview-item">
+                <div class="preview-thumb">🎮</div>
+                <div>
+                  <strong>Periféricos gamer</strong>
+                  <span>Produtos para setup, jogos e escritório.</span>
+                </div>
+              </article>
+
+              <article class="preview-item">
+                <div class="preview-thumb">🏷️</div>
+                <div>
+                  <strong>Cupons por plataforma</strong>
+                  <span>Amazon, ML, Shopee, AliExpress e Magalu.</span>
+                </div>
+              </article>
+
+              <article class="preview-item">
+                <div class="preview-thumb">👍</div>
+                <div>
+                  <strong>Aprovados Prometria</strong>
+                  <span>Espaço para produtos comprados e avaliados.</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="catalogo">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">Produtos selecionados</p>
+          <h2>Vitrine Prometria por categoria e site</h2>
+          <p class="section-lead">Uma área para apresentar produtos selecionados sem parecer uma loja tradicional. O visitante pode filtrar por tipo de produto ou por plataforma e depois seguir para o grupo.</p>
+        </div>
+
+        <div class="filters-panel reveal">
+          <div class="filters-row">
+            <div class="filter-group">
+              <strong>Filtrar por categoria</strong>
+              <div class="chips" data-filter-group="category">
+                <button class="filter-chip active" type="button" data-value="todos">Todos</button>
+                <button class="filter-chip" type="button" data-value="Periféricos gamer">Periféricos gamer</button>
+                <button class="filter-chip" type="button" data-value="Eletrônicos">Eletrônicos</button>
+                <button class="filter-chip" type="button" data-value="Casa e cozinha">Casa e cozinha</button>
+                <button class="filter-chip" type="button" data-value="Setup e escritório">Setup e escritório</button>
+                <button class="filter-chip" type="button" data-value="Celulares e acessórios">Celulares e acessórios</button>
+                <button class="filter-chip" type="button" data-value="Cupons e campanhas">Cupons e campanhas</button>
+                <button class="filter-chip" type="button" data-value="Produtos aprovados">Produtos aprovados</button>
+                <button class="filter-chip" type="button" data-value="Achadinhos úteis">Achadinhos úteis</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <strong>Filtrar por site</strong>
+              <div class="chips" data-filter-group="source">
+                <button class="filter-chip active" type="button" data-value="todos">Todos</button>
+                <button class="filter-chip" type="button" data-value="Amazon">Amazon</button>
+                <button class="filter-chip" type="button" data-value="Mercado Livre">Mercado Livre</button>
+                <button class="filter-chip" type="button" data-value="Shopee">Shopee</button>
+                <button class="filter-chip" type="button" data-value="AliExpress">AliExpress</button>
+                <button class="filter-chip" type="button" data-value="Magalu">Magalu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-status reveal">
+          <span data-result-count>Exibindo produtos selecionados</span>
+          <span>Preços, cupons, frete e disponibilidade podem mudar a qualquer momento.</span>
+        </div>
+
+        <div class="product-grid reveal" data-product-grid></div>
+
+        <div class="note reveal">
+          <strong>Observação:</strong> os cards são placeholders editoriais. Para publicar o site, substitua os títulos, descrições, imagens e links pelos produtos reais que a Prometria selecionar. O card pode levar para a oferta, para o grupo, para um post ou para uma página de produto aprovado.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Categorias</p>
+          <h2>Organização por tipo de produto</h2>
+          <p class="section-lead">Essa área ajuda o visitante a entender rapidamente quais tipos de achados a Prometria acompanha.</p>
+        </div>
+
+        <div class="grid category-grid">
+          <article class="card reveal"><div class="icon">🎮</div><h3>Periféricos gamer</h3><p>Mouses, teclados, headsets, mousepads e acessórios de setup.</p></article>
+          <article class="card reveal"><div class="icon">📱</div><h3>Eletrônicos</h3><p>Produtos de tecnologia com boa utilidade para rotina e entretenimento.</p></article>
+          <article class="card reveal"><div class="icon">🏠</div><h3>Casa e cozinha</h3><p>Achados práticos, funcionais e úteis para o dia a dia.</p></article>
+          <article class="card reveal"><div class="icon">🖥️</div><h3>Setup e escritório</h3><p>Organização, produtividade, conforto e acessórios para trabalho.</p></article>
+          <article class="card reveal"><div class="icon">🔌</div><h3>Celulares e acessórios</h3><p>Cabos, carregadores, suportes, capas, fones e acessórios úteis.</p></article>
+          <article class="card reveal"><div class="icon">🏷️</div><h3>Cupons e campanhas</h3><p>Cupons, campanhas de marketplace e oportunidades por tempo limitado.</p></article>
+          <article class="card reveal"><div class="icon">👍</div><h3>Produtos aprovados</h3><p>Itens comprados, recebidos ou avaliados com destaque de confiança.</p></article>
+          <article class="card reveal"><div class="icon">✨</div><h3>Achadinhos úteis</h3><p>Produtos simples, inteligentes e com boa aplicação prática.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="plataformas">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">Sites e marketplaces</p>
+          <h2>Também separado por plataforma</h2>
+          <p class="section-lead">A Prometria pode organizar páginas, filtros ou blocos específicos para cada marketplace.</p>
+        </div>
+
+        <div class="grid store-grid">
+          <article class="card store-card reveal"><span class="store-name">Amazon</span><h3>Ofertas Amazon</h3><p>Produtos, cupons e campanhas encontrados na Amazon.</p></article>
+          <article class="card store-card reveal"><span class="store-name">Mercado Livre</span><h3>Ofertas Mercado Livre</h3><p>Achados, produtos com boa apresentação e oportunidades do ML.</p></article>
+          <article class="card store-card reveal"><span class="store-name">Shopee</span><h3>Ofertas Shopee</h3><p>Achadinhos úteis, cupons e itens de bom custo-benefício.</p></article>
+          <article class="card store-card reveal"><span class="store-name">AliExpress</span><h3>Ofertas AliExpress</h3><p>Produtos importados, acessórios, tecnologia e seleção de achados.</p></article>
+          <article class="card store-card reveal"><span class="store-name">Magalu</span><h3>Ofertas Magalu</h3><p>Campanhas, produtos nacionais e ofertas selecionadas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">Como funciona</p>
+          <h2>Catálogo para navegar, grupos para acompanhar</h2>
+          <p class="section-lead">O site apresenta a curadoria e organiza os produtos. Os grupos continuam sendo o canal principal para avisos rápidos, cupons e novas oportunidades.</p>
+        </div>
+
+        <div class="grid steps-grid">
+          <article class="card reveal"><div class="icon">🔎</div><h3>Encontramos produtos</h3><p>Monitoramos ofertas, cupons e campanhas em diferentes plataformas.</p></article>
+          <article class="card reveal"><div class="icon">🧭</div><h3>Organizamos por filtros</h3><p>Separamos por categoria, site e tipo de oportunidade.</p></article>
+          <article class="card reveal"><div class="icon">✅</div><h3>Destacamos o que vale</h3><p>Produtos úteis, boa apresentação e maior potencial de compra inteligente.</p></article>
+          <article class="card reveal"><div class="icon">📲</div><h3>Enviamos nos grupos</h3><p>O usuário acompanha as novidades pelo WhatsApp, Telegram e redes sociais.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">Benefícios</p>
+          <h2>Uma curadoria que não parece loja genérica</h2>
+          <p class="section-lead">O foco é criar confiança, organização e recorrência para quem quer acompanhar ofertas sem se perder.</p>
+        </div>
+
+        <div class="grid benefit-grid">
+          <article class="card reveal"><div class="icon">📢</div><h3>Novidades nos grupos</h3><p>CTA forte para WhatsApp e Telegram em toda a experiência.</p></article>
+          <article class="card reveal"><div class="icon">🗂️</div><h3>Filtros úteis</h3><p>Categoria e marketplace ajudam o usuário a encontrar o que procura.</p></article>
+          <article class="card reveal"><div class="icon">🛡️</div><h3>Mais confiança</h3><p>Textos responsáveis, sem promessas exageradas ou linguagem enganosa.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="grupos">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <p class="kicker" style="color:rgba(255,255,255,.82)">Entre nos grupos</p>
+          <h2>Veja a vitrine e acompanhe as próximas ofertas em tempo real</h2>
+          <p>Receba promoções selecionadas direto no celular. Valores, cupons, frete e disponibilidade podem mudar a qualquer momento.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+            <a class="btn btn-secondary" href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Entrar no Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="duvidas">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">FAQ</p>
+          <h2>Dúvidas frequentes</h2>
+          <p class="section-lead">Explicações rápidas sobre a proposta da Prometria.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item open">
+            <button class="faq-button" type="button">A Prometria vende os produtos? <span>+</span></button>
+            <div class="faq-content">Não. A Prometria divulga ofertas, promoções e links de produtos encontrados em plataformas parceiras.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-button" type="button">O site pode ter produtos separados por categoria e plataforma? <span>+</span></button>
+            <div class="faq-content">Sim. O catálogo pode ser organizado por categorias como eletrônicos, setup e casa, além de plataformas como Amazon, Mercado Livre, Shopee, AliExpress e Magalu.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-button" type="button">Os preços podem mudar? <span>+</span></button>
+            <div class="faq-content">Sim. Valores, cupons, frete e disponibilidade podem mudar a qualquer momento.</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-button" type="button">Como recebo as ofertas? <span>+</span></button>
+            <div class="faq-content">Você pode entrar nos grupos de WhatsApp e Telegram para acompanhar as ofertas publicadas.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#inicio" aria-label="Prometria - Início">
+            <div class="brand-fallback">
+              <div class="brand-mark">P</div>
+              <div class="brand-name">
+                <strong>prometria</strong>
+                <span>ofertas inteligentes</span>
+              </div>
+            </div>
+          </a>
+          <p>Produtos selecionados, cupons, achados úteis e ofertas inteligentes para quem quer comprar melhor.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h3>Navegação</h3>
+            <a href="#catalogo">Produtos</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#plataformas">Sites</a>
+            <a href="#duvidas">Dúvidas</a>
+          </div>
+          <div class="footer-col">
+            <h3>Grupos</h3>
+            <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Telegram</a>
+          </div>
+          <div class="footer-col">
+            <h3>Redes</h3>
+            <a href="https://instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://tiktok.com/@SEUTIKTOK" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://youtube.com/@SEUYOUTUBE" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        Prometria é um grupo de curadoria de ofertas. Preços, cupons, frete e disponibilidade podem mudar sem aviso prévio.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+      {
+        title:"Produto selecionado para setup",
+        desc:"Espaço para mouse, teclado, suporte, luminária ou acessório útil de escritório.",
+        category:"Setup e escritório",
+        source:"Amazon",
+        approved:true,
+        icon:"🖥️"
+      },
+      {
+        title:"Achado gamer em destaque",
+        desc:"Modelo de card para periféricos gamer com curadoria Prometria.",
+        category:"Periféricos gamer",
+        source:"Mercado Livre",
+        approved:false,
+        icon:"🎮"
+      },
+      {
+        title:"Cupom ou campanha ativa",
+        desc:"Card para avisar campanha, regra de cupom ou oportunidade por plataforma.",
+        category:"Cupons e campanhas",
+        source:"Shopee",
+        approved:false,
+        icon:"🏷️"
+      },
+      {
+        title:"Acessório útil para celular",
+        desc:"Espaço para cabo, carregador, suporte, capa, fone ou adaptador.",
+        category:"Celulares e acessórios",
+        source:"AliExpress",
+        approved:false,
+        icon:"🔌"
+      },
+      {
+        title:"Produto aprovado pela Prometria",
+        desc:"Card para produto comprado, recebido ou avaliado com foto real e breve opinião.",
+        category:"Produtos aprovados",
+        source:"Amazon",
+        approved:true,
+        icon:"👍"
+      },
+      {
+        title:"Achadinho para casa",
+        desc:"Produto prático para rotina, organização, cozinha ou pequenos ambientes.",
+        category:"Casa e cozinha",
+        source:"Magalu",
+        approved:false,
+        icon:"🏠"
+      },
+      {
+        title:"Eletrônico selecionado",
+        desc:"Produto de tecnologia com boa utilidade e apresentação para o público.",
+        category:"Eletrônicos",
+        source:"Mercado Livre",
+        approved:false,
+        icon:"📱"
+      },
+      {
+        title:"Item importado interessante",
+        desc:"Espaço para produto importado com descrição simples e chamada para o grupo.",
+        category:"Achadinhos úteis",
+        source:"AliExpress",
+        approved:false,
+        icon:"✨"
+      },
+      {
+        title:"Campanha de marketplace",
+        desc:"Card ideal para chamadas de desconto, cupom e promoção organizada por site.",
+        category:"Cupons e campanhas",
+        source:"Amazon",
+        approved:false,
+        icon:"🏷️"
+      }
+    ];
+
+    const state = { category:"todos", source:"todos" };
+    const grid = document.querySelector("[data-product-grid]");
+    const count = document.querySelector("[data-result-count]");
+
+    function renderProducts(){
+      const filtered = products.filter(product => {
+        const byCategory = state.category === "todos" || product.category === state.category;
+        const bySource = state.source === "todos" || product.source === state.source;
+        return byCategory && bySource;
+      });
+
+      count.textContent = `Exibindo ${filtered.length} ${filtered.length === 1 ? "produto selecionado" : "produtos selecionados"}`;
+
+      if(!filtered.length){
+        grid.innerHTML = `<article class="card"><h3>Nenhum produto encontrado</h3><p>Não há cards nesta combinação de filtros. Adicione mais produtos ou escolha outra categoria/plataforma.</p></article>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(product => `
+        <article class="card product-card">
+          <div class="product-media">
+            <div class="tag-row">
+              <span class="badge">${product.source}</span>
+              <span class="badge ${product.approved ? "green" : ""}">${product.approved ? "Aprovado" : "Curadoria"}</span>
+            </div>
+            <div class="product-img">${product.icon}</div>
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span class="meta">${product.category}</span>
+              <span class="meta source">${product.source}</span>
+            </div>
+            <h3 class="product-title">${product.title}</h3>
+            <p class="product-desc">${product.desc}</p>
+            <div class="product-actions">
+              <a class="btn btn-soft" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Ver no grupo</a>
+            </div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    document.querySelectorAll("[data-filter-group]").forEach(group => {
+      const type = group.dataset.filterGroup;
+      group.querySelectorAll(".filter-chip").forEach(button => {
+        button.addEventListener("click", () => {
+          group.querySelectorAll(".filter-chip").forEach(chip => chip.classList.remove("active"));
+          button.classList.add("active");
+          state[type] = button.dataset.value;
+          renderProducts();
+        });
+      });
+    });
+
+    const menuButton = document.querySelector("[data-mobile-toggle]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+    menuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+    });
+
+    document.querySelectorAll(".faq-button").forEach(button => {
+      button.addEventListener("click", () => {
+        button.closest(".faq-item").classList.toggle("open");
+      });
+    });
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if("IntersectionObserver" in window){
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12});
+      revealElements.forEach(el => observer.observe(el));
+    } else {
+      revealElements.forEach(el => el.classList.add("visible"));
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
