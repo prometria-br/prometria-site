@@ -1,12 +1,27 @@
-# Prometria - GitHub Pages
+# Prometria - Site com catálogo real
 
-Arquivos para publicar o site da Prometria gratuitamente pelo GitHub Pages.
+Esta versão usa produtos reais da planilha `Prometria - Aliexpress - Curadoria.xlsx`.
 
-## Como usar
+## Estrutura
 
-1. Crie um repositório no GitHub.
-2. Envie o arquivo `index.html` para a raiz do repositório.
-3. Vá em Settings > Pages.
-4. Em Build and deployment, selecione Deploy from a branch.
-5. Selecione a branch `main` e a pasta `/root`.
-6. Salve e aguarde a publicação.
+- `index.html`: site atualizado
+- `assets/`: logo e favicon
+- `data/produtos.json`: catálogo normalizado de produtos
+- `docs/arquitetura-radar-site.md`: proposta técnica para o workflow futuro
+
+## Produtos carregados
+
+- Total: 26
+- Fonte inicial: AliExpress
+- Campos exibidos no site: imagem, título, preço atual, preço original, desconto, categoria, marketplace, selo, link afiliado e link do grupo
+
+## Como testar
+
+No GitHub Pages, envie todos estes itens para o repositório:
+
+- `index.html`
+- pasta `assets`
+- pasta `data`
+- pasta `docs`
+
+Não precisa atualizar o GitHub agora; esta é uma versão de trabalho para revisão.

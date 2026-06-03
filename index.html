@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prometria | Produtos selecionados e ofertas inteligentes</title>
   <meta name="description" content="Produtos selecionados por categoria e marketplace, cupons, achados úteis e grupos de ofertas inteligentes da Prometria.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -827,11 +828,164 @@
       transform:translateY(0);
     }
 
+
+    .brand-logo{
+      width:185px;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .social-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+    }
+
+    .social-card{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:rgba(255,255,255,.92);
+      box-shadow:0 12px 34px rgba(30,20,60,.05);
+      transition:.2s ease;
+    }
+
+    .social-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+      border-color:rgba(124,60,255,.26);
+    }
+
+    .social-card-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .social-icon{
+      width:48px;
+      height:48px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      color:var(--purple-dark);
+      background:linear-gradient(135deg,rgba(124,60,255,.11),rgba(78,216,255,.12));
+      font-size:22px;
+    }
+
+    .social-card strong{
+      display:block;
+      margin-bottom:3px;
+      font-size:16px;
+      letter-spacing:-.03em;
+    }
+
+    .social-card span{
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+      overflow-wrap:anywhere;
+    }
+
+    .social-arrow{
+      width:34px;
+      height:34px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      background:#f4edff;
+      color:var(--purple-dark);
+      font-weight:800;
+    }
+
+
+    .product-img{
+      overflow:hidden;
+      background:#fff;
+    }
+
+    .product-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:inherit;
+      display:block;
+    }
+
+    .product-img-fallback{
+      width:100%;
+      height:100%;
+      display:grid;
+      place-items:center;
+      font-size:42px;
+    }
+
+    .price-block{
+      display:flex;
+      align-items:flex-end;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:4px 0 12px;
+    }
+
+    .price-current{
+      color:var(--purple-dark);
+      font-size:24px;
+      font-weight:850;
+      letter-spacing:-.04em;
+      line-height:1;
+    }
+
+    .price-old{
+      color:var(--muted);
+      font-size:13px;
+      text-decoration:line-through;
+      line-height:1.2;
+    }
+
+    .discount-pill{
+      padding:5px 8px;
+      border-radius:999px;
+      background:#ecfdf3;
+      color:#12813d;
+      font-size:11px;
+      font-weight:850;
+    }
+
+    .product-update{
+      margin:-4px 0 14px;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.45;
+    }
+
+    .btn-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:9px;
+    }
+
+    @media(min-width:560px){
+      .btn-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
     @media(min-width:560px){
       .hero-actions,.cta-actions{flex-direction:row}
       .proof-grid{grid-template-columns:repeat(3,1fr)}
       .category-grid,.store-grid,.product-grid,.benefit-grid{grid-template-columns:repeat(2,1fr)}
       .footer-links{grid-template-columns:repeat(2,1fr)}
+      .social-grid{grid-template-columns:repeat(2,1fr)}
     }
 
     @media(min-width:860px){
@@ -848,6 +1002,7 @@
       .product-grid{grid-template-columns:repeat(3,1fr)}
       .benefit-grid{grid-template-columns:repeat(3,1fr)}
       .footer-grid{grid-template-columns:1.1fr .9fr}
+      .social-grid{grid-template-columns:repeat(3,1fr)}
       .footer-links{grid-template-columns:repeat(3,1fr)}
     }
 
@@ -870,14 +1025,7 @@
     <div class="container">
       <nav class="nav">
         <a class="brand" href="#inicio" aria-label="Prometria - Início">
-          <!-- Coloque aqui o arquivo oficial da logo. Exemplo: <img src="assets/logo-prometria.png" alt="Prometria - ofertas inteligentes"> -->
-          <div class="brand-fallback">
-            <div class="brand-mark">P</div>
-            <div class="brand-name">
-              <strong>prometria</strong>
-              <span>ofertas inteligentes</span>
-            </div>
-          </div>
+          <img class="brand-logo" src="assets/prometria-logo-horizontal.png" alt="Prometria - ofertas inteligentes">
         </a>
 
         <div class="menu">
@@ -887,11 +1035,13 @@
           <a href="#plataformas">Sites</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#grupos">Grupos</a>
-          <a href="#duvidas">Dúvidas</a>
+          <a href="#redes">Redes</a>
+          <a href="#redes">Redes</a>
+        <a href="#duvidas">Dúvidas</a>
         </div>
 
         <div class="actions">
-          <a class="btn btn-primary desktop-cta" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo</a>
+          <a class="btn btn-primary desktop-cta" href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">Entrar no grupo</a>
           <button class="mobile-toggle" type="button" aria-label="Abrir menu" data-mobile-toggle>☰</button>
         </div>
       </nav>
@@ -904,7 +1054,7 @@
         <a href="#como-funciona">Como funciona</a>
         <a href="#grupos">Grupos</a>
         <a href="#duvidas">Dúvidas</a>
-        <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo</a>
+        <a href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">Entrar no grupo</a>
       </div>
     </div>
   </header>
@@ -919,8 +1069,8 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#catalogo">Ver produtos selecionados →</a>
-            <a class="btn btn-secondary" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no WhatsApp</a>
-            <a class="btn btn-secondary" href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Entrar no Telegram</a>
+            <a class="btn btn-secondary" href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">Entrar no WhatsApp</a>
+            <a class="btn btn-secondary" href="https://t.me/prometriabr" target="_blank" rel="noopener">Entrar no Telegram</a>
           </div>
 
           <div class="proof-grid">
@@ -1105,9 +1255,99 @@
           <h2>Veja a vitrine e acompanhe as próximas ofertas em tempo real</h2>
           <p>Receba promoções selecionadas direto no celular. Valores, cupons, frete e disponibilidade podem mudar a qualquer momento.</p>
           <div class="cta-actions">
-            <a class="btn btn-primary" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
-            <a class="btn btn-secondary" href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Entrar no Telegram</a>
+            <a class="btn btn-primary" href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+            <a class="btn btn-secondary" href="https://t.me/prometriabr" target="_blank" rel="noopener">Entrar no Telegram</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="redes">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker">Canais oficiais</p>
+          <h2>Siga a Prometria nas redes e grupos</h2>
+          <p class="section-lead">Acompanhe ofertas, cupons, achados e avisos rápidos pelos canais oficiais da Prometria.</p>
+        </div>
+
+        <div class="social-grid reveal">
+          <a class="social-card" href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">💬</div>
+              <div>
+                <strong>Grupo no WhatsApp</strong>
+                <span>Entre para receber ofertas e achados no grupo.</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="https://t.me/prometriabr" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">✈️</div>
+              <div>
+                <strong>Telegram</strong>
+                <span>Canal Prometria para acompanhar publicações.</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="https://www.instagram.com/prometriabr/" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">📸</div>
+              <div>
+                <strong>Instagram</strong>
+                <span>@prometriabr</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="https://www.tiktok.com/@prometriabr" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">🎵</div>
+              <div>
+                <strong>TikTok</strong>
+                <span>@prometriabr</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="https://x.com/Prometriabr" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">𝕏</div>
+              <div>
+                <strong>X / Twitter</strong>
+                <span>@Prometriabr</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="https://linktr.ee/prometria" target="_blank" rel="noopener">
+            <div class="social-card-left">
+              <div class="social-icon">🔗</div>
+              <div>
+                <strong>Linktree</strong>
+                <span>Todos os links oficiais em um só lugar.</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+
+          <a class="social-card" href="mailto:prometriabr@gmail.com">
+            <div class="social-card-left">
+              <div class="social-icon">✉️</div>
+              <div>
+                <strong>E-mail</strong>
+                <span>prometriabr@gmail.com</span>
+              </div>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
         </div>
       </div>
     </section>
@@ -1147,14 +1387,8 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="#inicio" aria-label="Prometria - Início">
-            <div class="brand-fallback">
-              <div class="brand-mark">P</div>
-              <div class="brand-name">
-                <strong>prometria</strong>
-                <span>ofertas inteligentes</span>
-              </div>
-            </div>
-          </a>
+          <img class="brand-logo" src="assets/prometria-logo-horizontal.png" alt="Prometria - ofertas inteligentes">
+        </a>
           <p>Produtos selecionados, cupons, achados úteis e ofertas inteligentes para quem quer comprar melhor.</p>
         </div>
 
@@ -1168,14 +1402,16 @@
           </div>
           <div class="footer-col">
             <h3>Grupos</h3>
-            <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a>
-            <a href="https://t.me/SEUGRUPO" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://t.me/prometriabr" target="_blank" rel="noopener">Telegram</a>
           </div>
           <div class="footer-col">
             <h3>Redes</h3>
-            <a href="https://instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://tiktok.com/@SEUTIKTOK" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://youtube.com/@SEUYOUTUBE" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/prometriabr/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@prometriabr" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://x.com/Prometriabr" target="_blank" rel="noopener">X / Twitter</a>
+            <a href="https://linktr.ee/prometria" target="_blank" rel="noopener">Linktree</a>
+            <a href="mailto:prometriabr@gmail.com">E-mail</a>
           </div>
         </div>
       </div>
@@ -1187,121 +1423,112 @@
   </footer>
 
   <script>
-    const products = [
-      {
-        title:"Produto selecionado para setup",
-        desc:"Espaço para mouse, teclado, suporte, luminária ou acessório útil de escritório.",
-        category:"Setup e escritório",
-        source:"Amazon",
-        approved:true,
-        icon:"🖥️"
-      },
-      {
-        title:"Achado gamer em destaque",
-        desc:"Modelo de card para periféricos gamer com curadoria Prometria.",
-        category:"Periféricos gamer",
-        source:"Mercado Livre",
-        approved:false,
-        icon:"🎮"
-      },
-      {
-        title:"Cupom ou campanha ativa",
-        desc:"Card para avisar campanha, regra de cupom ou oportunidade por plataforma.",
-        category:"Cupons e campanhas",
-        source:"Shopee",
-        approved:false,
-        icon:"🏷️"
-      },
-      {
-        title:"Acessório útil para celular",
-        desc:"Espaço para cabo, carregador, suporte, capa, fone ou adaptador.",
-        category:"Celulares e acessórios",
-        source:"AliExpress",
-        approved:false,
-        icon:"🔌"
-      },
-      {
-        title:"Produto aprovado pela Prometria",
-        desc:"Card para produto comprado, recebido ou avaliado com foto real e breve opinião.",
-        category:"Produtos aprovados",
-        source:"Amazon",
-        approved:true,
-        icon:"👍"
-      },
-      {
-        title:"Achadinho para casa",
-        desc:"Produto prático para rotina, organização, cozinha ou pequenos ambientes.",
-        category:"Casa e cozinha",
-        source:"Magalu",
-        approved:false,
-        icon:"🏠"
-      },
-      {
-        title:"Eletrônico selecionado",
-        desc:"Produto de tecnologia com boa utilidade e apresentação para o público.",
-        category:"Eletrônicos",
-        source:"Mercado Livre",
-        approved:false,
-        icon:"📱"
-      },
-      {
-        title:"Item importado interessante",
-        desc:"Espaço para produto importado com descrição simples e chamada para o grupo.",
-        category:"Achadinhos úteis",
-        source:"AliExpress",
-        approved:false,
-        icon:"✨"
-      },
-      {
-        title:"Campanha de marketplace",
-        desc:"Card ideal para chamadas de desconto, cupom e promoção organizada por site.",
-        category:"Cupons e campanhas",
-        source:"Amazon",
-        approved:false,
-        icon:"🏷️"
-      }
-    ];
-
+    let products = [];
+    const DATA_URL = "data/produtos.json";
     const state = { category:"todos", source:"todos" };
     const grid = document.querySelector("[data-product-grid]");
     const count = document.querySelector("[data-result-count]");
 
-    function renderProducts(){
-      const filtered = products.filter(product => {
-        const byCategory = state.category === "todos" || product.category === state.category;
-        const bySource = state.source === "todos" || product.source === state.source;
-        return byCategory && bySource;
-      });
+    function formatPrice(product){
+      if(!product.price_display) return "";
+      const oldPrice = product.old_price_display ? `<span class="price-old">${product.old_price_display}</span>` : "";
+      const discount = product.discount && product.discount > 0 ? `<span class="discount-pill">-${product.discount}%</span>` : "";
+      return `
+        <div class="price-block">
+          <span class="price-current">${product.price_display}</span>
+          ${oldPrice}
+          ${discount}
+        </div>
+      `;
+    }
 
-      count.textContent = `Exibindo ${filtered.length} ${filtered.length === 1 ? "produto selecionado" : "produtos selecionados"}`;
+    function safe(text){
+      return String(text || "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;");
+    }
+
+    function productImage(product){
+      const img = product.image ? safe(product.image) : "";
+      if(!img){
+        return `<div class="product-img-fallback">✨</div>`;
+      }
+      return `<img src="${img}" alt="${safe(product.title)}" loading="lazy" onerror="this.outerHTML='<div class=&quot;product-img-fallback&quot;>✨</div>'">`;
+    }
+
+    function renderProducts(){
+      const activeProducts = products.filter(product => (product.status_site || "ATIVO") === "ATIVO");
+      const filtered = activeProducts.filter(product => {
+        const byCategory = state.category === "todos" || product.category === state.category;
+        const bySource = state.source === "todos" || product.source === state.source || product.marketplace === state.source;
+        return byCategory && bySource;
+      }).sort((a,b) => (a.order || 999) - (b.order || 999));
+
+      if(count){
+        count.textContent = `Exibindo ${filtered.length} ${filtered.length === 1 ? "produto selecionado" : "produtos selecionados"}`;
+      }
+
+      if(!grid) return;
 
       if(!filtered.length){
         grid.innerHTML = `<article class="card"><h3>Nenhum produto encontrado</h3><p>Não há cards nesta combinação de filtros. Adicione mais produtos ou escolha outra categoria/plataforma.</p></article>`;
         return;
       }
 
-      grid.innerHTML = filtered.map(product => `
-        <article class="card product-card">
-          <div class="product-media">
-            <div class="tag-row">
-              <span class="badge">${product.source}</span>
-              <span class="badge ${product.approved ? "green" : ""}">${product.approved ? "Aprovado" : "Curadoria"}</span>
+      grid.innerHTML = filtered.map(product => {
+        const badgeClass = product.approved ? "green" : "";
+        const badgeText = product.badge || (product.approved ? "Aprovado" : "Curadoria");
+        const updated = product.updated_display ? `<div class="product-update">Atualizado em ${safe(product.updated_display)} · Preços podem mudar sem aviso.</div>` : `<div class="product-update">Preços podem mudar sem aviso.</div>`;
+        const offerUrl = safe(product.affiliate_url || product.link || "#");
+        const groupUrl = safe(product.group_url || "https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78");
+
+        return `
+          <article class="card product-card">
+            <div class="product-media">
+              <div class="tag-row">
+                <span class="badge">${safe(product.source || product.marketplace)}</span>
+                <span class="badge ${badgeClass}">${safe(badgeText)}</span>
+              </div>
+              <div class="product-img">${productImage(product)}</div>
             </div>
-            <div class="product-img">${product.icon}</div>
-          </div>
-          <div class="product-body">
-            <div class="product-meta">
-              <span class="meta">${product.category}</span>
-              <span class="meta source">${product.source}</span>
+            <div class="product-body">
+              <div class="product-meta">
+                <span class="meta">${safe(product.category)}</span>
+                <span class="meta source">${safe(product.source || product.marketplace)}</span>
+              </div>
+              <h3 class="product-title">${safe(product.title)}</h3>
+              ${formatPrice(product)}
+              ${updated}
+              <p class="product-desc">${safe(product.desc)}</p>
+              <div class="product-actions btn-grid">
+                <a class="btn btn-primary" href="${offerUrl}" target="_blank" rel="noopener sponsored">Ver oferta</a>
+                <a class="btn btn-soft" href="${groupUrl}" target="_blank" rel="noopener">Ver no grupo</a>
+              </div>
             </div>
-            <h3 class="product-title">${product.title}</h3>
-            <p class="product-desc">${product.desc}</p>
-            <div class="product-actions">
-              <a class="btn btn-soft" href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener">Ver no grupo</a>
-            </div>
-          </div>
-        </article>
-      `).join("");
+          </article>
+        `;
+      }).join("");
+    }
+
+    async function loadProducts(){
+      try{
+        const response = await fetch(DATA_URL, {cache:"no-store"});
+        if(!response.ok) throw new Error("Não foi possível carregar o catálogo.");
+        const payload = await response.json();
+        products = Array.isArray(payload) ? payload : (payload.products || []);
+        renderProducts();
+      } catch(error){
+        products = [];
+        if(grid){
+          grid.innerHTML = `<article class="card"><h3>Catálogo não carregado</h3><p>O arquivo <strong>data/produtos.json</strong> não foi encontrado ou não pôde ser lido. No GitHub Pages ele deve carregar normalmente quando o arquivo estiver publicado junto com o site.</p></article>`;
+        }
+        if(count){
+          count.textContent = "Catálogo aguardando arquivo de produtos";
+        }
+        console.error(error);
+      }
     }
 
     document.querySelectorAll("[data-filter-group]").forEach(group => {
@@ -1319,13 +1546,15 @@
     const menuButton = document.querySelector("[data-mobile-toggle]");
     const mobileMenu = document.querySelector("[data-mobile-menu]");
 
-    menuButton.addEventListener("click", () => {
-      mobileMenu.classList.toggle("open");
-    });
+    if(menuButton && mobileMenu){
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+      });
 
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => mobileMenu.classList.remove("open"));
-    });
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => mobileMenu.classList.remove("open"));
+      });
+    }
 
     document.querySelectorAll(".faq-button").forEach(button => {
       button.addEventListener("click", () => {
@@ -1348,7 +1577,8 @@
       revealElements.forEach(el => el.classList.add("visible"));
     }
 
-    renderProducts();
+    loadProducts();
   </script>
+
 </body>
 </html>
