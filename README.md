@@ -1,27 +1,28 @@
-# Prometria - Site com catálogo real
+# Prometria Site V2 — páginas separadas
 
-Esta versão usa produtos reais da planilha `Prometria - Aliexpress - Curadoria.xlsx`.
+Versão reorganizada do site Prometria para GitHub Pages.
 
 ## Estrutura
 
-- `index.html`: site atualizado
-- `assets/`: logo e favicon
-- `data/produtos.json`: catálogo normalizado de produtos
-- `docs/arquitetura-radar-site.md`: proposta técnica para o workflow futuro
+- `index.html` — página inicial institucional
+- `ofertas/` — vitrine de produtos com busca/filtros
+- `cupons/` — campanhas e cupons ativos
+- `categorias/` — navegação por categoria
+- `sites/` — navegação por loja/marketplace
+- `aprovados/` — produtos aprovados/curadoria forte
+- `grupos/` — WhatsApp, Telegram e redes sociais
+- `data/produtos.json` — base de produtos
+- `data/campanhas.json` — base de campanhas/cupons
+- `data/config.json` — links oficiais
 
-## Produtos carregados
+## Como subir no GitHub
 
-- Total: 26
-- Fonte inicial: AliExpress
-- Campos exibidos no site: imagem, título, preço atual, preço original, desconto, categoria, marketplace, selo, link afiliado e link do grupo
+1. Extraia o ZIP.
+2. Envie todo o conteúdo para a raiz do repositório `prometria-site`.
+3. Faça commit.
+4. Aguarde o GitHub Pages atualizar.
 
-## Como testar
+## Observação
 
-No GitHub Pages, envie todos estes itens para o repositório:
-
-- `index.html`
-- pasta `assets`
-- pasta `data`
-- pasta `docs`
-
-Não precisa atualizar o GitHub agora; esta é uma versão de trabalho para revisão.
+O site não busca diretamente nos marketplaces. Ele lê os arquivos JSON da pasta `data/`.
+Quando a automação ficar pronta, ela poderá atualizar `produtos.json` e `campanhas.json`.

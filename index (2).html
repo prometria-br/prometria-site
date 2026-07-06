@@ -1,0 +1,226 @@
+const BASE = window.PROMETRIA_BASE || './';
+const PAGE = document.body.dataset.page || 'home';
+
+const state = { products: [], campaigns: [], config: null };
+
+const fmtBRL = (value) => {
+  const n = Number(value || 0);
+  if (!n) return '';
+  return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+};
+
+const by = (key) => document.querySelector(key);
+const all = (key) => Array.from(document.querySelectorAll(key));
+
+function normalizeProduct(p, idx = 0){
+  return {
+    id: p.id || p.ID_PRODUTO || `produto-${idx}`,
+    title: p.title_full || p.title || p.TITULO_PRODUTO || p.PRODUTO || 'Produto Prometria',
+    shortTitle: p.title || p.TITULO_PRODUTO || p.PRODUTO || 'Produto Prometria',
+    category: p.category || p.CATEGORIA || 'Achadinhos úteis',
+    marketplace: p.marketplace || p.source || p.PLATAFORMA || 'Prometria',
+    image: p.image || p.IMAGEM_URL || `${BASE}assets/prometria-symbol.png`,
+    price: Number(p.price || p.PRECO_ATUAL || p.PREÇO_ATUAL || 0),
+    priceDisplay: p.price_display || p.preco_display || fmtBRL(p.price || p.PRECO_ATUAL || p.PREÇO_ATUAL),
+    oldPrice: Number(p.old_price || p.PRECO_ORIGINAL || 0),
+    oldPriceDisplay: p.old_price_display || fmtBRL(p.old_price || p.PRECO_ORIGINAL),
+    discount: Number(p.discount || p.DESCONTO_PERCENTUAL || 0),
+    coupon: p.coupon || p.CUPOM || '',
+    url: p.affiliate_url || p.LINK_AFILIADO || p.url || '#',
+    badge: p.badge || p.classification || p.STATUS_PRODUTO || 'Selecionado',
+    approved: Boolean(p.approved || String(p.badge || '').toLowerCase().includes('aprovado')),
+    score: Number(p.score || p.SCORE_COM_CUPOM || 0),
+    rating: Number(p.rating || p.AVALIACAO || 0),
+    sales: Number(p.sales || p.VENDAS || 0),
+    updated: p.updated_display || p.updated_at || '',
+    groupUrl: p.group_url || (state.config?.links?.whatsapp) || '#'
+  };
+}
+
+async function loadJSON(path, fallback){
+  try{
+    const res = await fetch(`${BASE}${path}`, { cache: 'no-store' });
+    if(!res.ok) throw new Error(path);
+    return await res.json();
+  }catch(e){
+    return fallback;
+  }
+}
+
+function productCard(p){
+  const meta = [p.marketplace, p.category].filter(Boolean).join(' · ');
+  const rating = p.rating ? `⭐ ${p.rating.toFixed(1)}` : '';
+  const sales = p.sales ? `🛒 ${p.sales.toLocaleString('pt-BR')} vendas` : '';
+  const discount = p.discount ? `<span class="badge discount">-${p.discount}%</span>` : '';
+  const oldPrice = p.oldPriceDisplay ? `<span class="old-price">${p.oldPriceDisplay}</span>` : '';
+  const img = p.image || `${BASE}assets/prometria-symbol.png`;
+  return `
+    <article class="product-card" data-category="${escapeAttr(p.category)}" data-marketplace="${escapeAttr(p.marketplace)}">
+      <a class="product-media" href="${escapeAttr(p.url)}" target="_blank" rel="noopener sponsored">
+        <span class="badge top">${escapeHTML(p.badge)}</span>
+        ${discount}
+        <img src="${escapeAttr(img)}" alt="${escapeAttr(p.shortTitle)}" loading="lazy" onerror="this.src='${BASE}assets/prometria-symbol.png'">
+      </a>
+      <div class="product-body">
+        <div class="meta-row"><span>${escapeHTML(meta)}</span></div>
+        <a href="${escapeAttr(p.url)}" target="_blank" rel="noopener sponsored" class="product-title">${escapeHTML(p.shortTitle)}</a>
+        <div class="meta-row">${[rating, sales, p.score ? `Score ${p.score}` : ''].filter(Boolean).map(x => `<span>${escapeHTML(x)}</span>`).join('')}</div>
+        <div class="price-row"><span class="price">${escapeHTML(p.priceDisplay || 'Ver oferta')}</span>${oldPrice}</div>
+        ${p.coupon ? `<span class="badge">Cupom: ${escapeHTML(p.coupon)}</span>` : ''}
+        <div class="product-actions">
+          <a class="btn btn-primary" href="${escapeAttr(p.url)}" target="_blank" rel="noopener sponsored">Ver oferta</a>
+          <a class="btn btn-secondary" href="${escapeAttr(p.groupUrl)}" target="_blank" rel="noopener">Ver no grupo</a>
+        </div>
+        <div class="notice">Preço capturado e sujeito a alteração pela plataforma.</div>
+      </div>
+    </article>`;
+}
+
+function escapeHTML(str){return String(str ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function escapeAttr(str){return escapeHTML(str).replace(/'/g, '&#39;');}
+function unique(arr){return Array.from(new Set(arr.filter(Boolean))).sort((a,b)=>a.localeCompare(b,'pt-BR'));}
+
+function populateOptions(select, values, label){
+  if(!select) return;
+  select.innerHTML = `<option value="">${label}</option>` + values.map(v => `<option value="${escapeAttr(v)}">${escapeHTML(v)}</option>`).join('');
+}
+
+function renderProducts(targetSelector, products, limit){
+  const el = by(targetSelector);
+  if(!el) return;
+  const list = limit ? products.slice(0, limit) : products;
+  if(!list.length){
+    el.innerHTML = `<div class="empty-state"><strong>Nenhum produto ativo encontrado.</strong><span>A vitrine será preenchida quando a base do Prometria for atualizada.</span></div>`;
+    return;
+  }
+  el.innerHTML = list.map(productCard).join('');
+}
+
+function setupProductFilters(){
+  const grid = by('#productsGrid');
+  if(!grid) return;
+  const search = by('#searchInput');
+  const category = by('#categorySelect');
+  const market = by('#marketSelect');
+  const sort = by('#sortSelect');
+  populateOptions(category, unique(state.products.map(p=>p.category)), 'Todas as categorias');
+  populateOptions(market, unique(state.products.map(p=>p.marketplace)), 'Todas as lojas');
+  function apply(){
+    const term = (search?.value || '').trim().toLowerCase();
+    const cat = category?.value || '';
+    const mk = market?.value || '';
+    let list = state.products.filter(p =>
+      (!term || `${p.title} ${p.category} ${p.marketplace}`.toLowerCase().includes(term)) &&
+      (!cat || p.category === cat) &&
+      (!mk || p.marketplace === mk)
+    );
+    const s = sort?.value || 'score';
+    if(s === 'price-asc') list.sort((a,b)=>a.price-b.price);
+    else if(s === 'price-desc') list.sort((a,b)=>b.price-a.price);
+    else if(s === 'discount') list.sort((a,b)=>b.discount-a.discount);
+    else list.sort((a,b)=>b.score-a.score);
+    renderProducts('#productsGrid', list);
+    const count = by('#resultsCount');
+    if(count) count.textContent = `${list.length} item${list.length === 1 ? '' : 's'}`;
+  }
+  [search, category, market, sort].filter(Boolean).forEach(el=>el.addEventListener('input', apply));
+  apply();
+}
+
+function renderCategories(){
+  const el = by('#categoriesGrid');
+  if(!el) return;
+  const icons = {'Periféricos gamer':'🎮','Eletrônicos':'⚡','Casa e cozinha':'🏠','Setup e escritório':'🖥️','Celulares e acessórios':'📱','Cupons e campanhas':'🏷️','Produtos aprovados':'👍','Achadinhos úteis':'✨'};
+  const counts = state.products.reduce((acc,p)=>{acc[p.category]=(acc[p.category]||0)+1;return acc;},{});
+  const cats = unique([...Object.keys(counts), 'Periféricos gamer','Eletrônicos','Casa e cozinha','Setup e escritório','Celulares e acessórios','Achadinhos úteis']);
+  el.innerHTML = cats.map(cat => `
+    <a class="category-card" href="${BASE}ofertas/?categoria=${encodeURIComponent(cat)}">
+      <div class="card-top"><div class="big-icon">${icons[cat] || '🛍️'}</div><span class="count-pill">${counts[cat] || 0} itens</span></div>
+      <h3>${escapeHTML(cat)}</h3>
+      <p>Produtos selecionados pela curadoria Prometria nessa categoria.</p>
+    </a>`).join('');
+}
+
+function renderStores(){
+  const el = by('#storesGrid');
+  if(!el) return;
+  const stores = ['Amazon','Mercado Livre','Shopee','AliExpress','Magalu'];
+  const counts = state.products.reduce((acc,p)=>{acc[p.marketplace]=(acc[p.marketplace]||0)+1;return acc;},{});
+  el.innerHTML = stores.map(store => `
+    <a class="store-card" href="${BASE}ofertas/?loja=${encodeURIComponent(store)}">
+      <div class="card-top"><div class="store-logo">${escapeHTML(store)}</div><span class="count-pill">${counts[store] || 0} itens</span></div>
+      <p>Ofertas e achados filtrados do ${escapeHTML(store)}.</p>
+      <span class="badge">Ver vitrine →</span>
+    </a>`).join('');
+}
+
+function renderCampaigns(){
+  const el = by('#campaignsGrid');
+  if(!el) return;
+  const list = state.campaigns || [];
+  if(!list.length){
+    el.innerHTML = `<div class="empty-state"><strong>Nenhuma campanha ativa publicada no site agora.</strong><span>Quando o radar Prometria publicar cupons ativos, eles aparecerão aqui automaticamente.</span><br><br><a class="btn btn-primary" href="${state.config?.links?.whatsapp || '#'}" target="_blank">Entrar no grupo</a></div>`;
+    return;
+  }
+  el.innerHTML = list.map(c => `
+    <article class="card">
+      <div class="card-icon">🏷️</div>
+      <span class="badge">${escapeHTML(c.marketplace || 'Prometria')}</span>
+      <h3>${escapeHTML(c.title || c.coupon || 'Cupom ativo')}</h3>
+      <p>${c.discount_value ? `${fmtBRL(c.discount_value)} OFF` : ''}${c.min_value ? ` em compras acima de ${fmtBRL(c.min_value)}` : ''}</p>
+      ${c.coupon ? `<p><b>Cupom:</b> ${escapeHTML(c.coupon)}</p>` : ''}
+      <br><a class="btn btn-primary" href="${escapeAttr(c.redeem_url || state.config?.links?.whatsapp || '#')}" target="_blank" rel="noopener sponsored">Resgatar / Ver grupo</a>
+    </article>`).join('');
+}
+
+function applyURLParams(){
+  const params = new URLSearchParams(location.search);
+  const cat = params.get('categoria');
+  const loja = params.get('loja');
+  if(cat && by('#categorySelect')) by('#categorySelect').value = cat;
+  if(loja && by('#marketSelect')) by('#marketSelect').value = loja;
+  ['#categorySelect','#marketSelect'].forEach(s => by(s)?.dispatchEvent(new Event('input')));
+}
+
+function renderApproved(){
+  const list = state.products.filter(p => p.approved || /aprov/i.test(p.badge));
+  renderProducts('#approvedGrid', list.length ? list : state.products.slice(0, 8));
+}
+
+function setupNav(){
+  const btn = by('#menuToggle');
+  const nav = by('#navlinks');
+  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
+  all('[data-nav]').forEach(a => { if(a.dataset.nav === PAGE) a.classList.add('active'); });
+}
+
+function setLinks(){
+  const links = state.config?.links || {};
+  all('[data-link]').forEach(a => {
+    const key = a.dataset.link;
+    if(links[key]) a.href = links[key];
+  });
+}
+
+async function init(){
+  setupNav();
+  const [config, prodData, campData] = await Promise.all([
+    loadJSON('data/config.json', null),
+    loadJSON('data/produtos.json', {products: []}),
+    loadJSON('data/campanhas.json', {campaigns: []})
+  ]);
+  state.config = config || {links:{}};
+  state.products = (prodData.products || []).map(normalizeProduct);
+  state.campaigns = campData.campaigns || [];
+  setLinks();
+  renderProducts('#homeProducts', state.products, 8);
+  renderProducts('#productsGrid', state.products);
+  setupProductFilters();
+  setTimeout(applyURLParams, 0);
+  renderCategories();
+  renderStores();
+  renderCampaigns();
+  renderApproved();
+}
+
+document.addEventListener('DOMContentLoaded', init);
