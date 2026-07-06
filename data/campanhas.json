@@ -1,0 +1,13 @@
+[
+  {
+    "id": "demo-cupom-001",
+    "title": "Cupom de exemplo",
+    "marketplace": "Amazon",
+    "coupon": "EXEMPLO",
+    "discount": "",
+    "minValue": "",
+    "status": "demo",
+    "description": "Campanha demonstrativa. Cupons reais serão publicados pela automação.",
+    "redeemUrl": "#"
+  }
+]

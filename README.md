@@ -1,28 +1,55 @@
-# Prometria Site V2 — páginas separadas
+# Prometria Site V3 — multipáginas real
 
-Versão reorganizada do site Prometria para GitHub Pages.
+Esta versão corrige dois pontos:
 
-## Estrutura
+1. O site não é mais uma landing page única com âncoras.
+2. Os produtos de teste não exibem preços fixos para evitar valores errados no ar.
 
-- `index.html` — página inicial institucional
-- `ofertas/` — vitrine de produtos com busca/filtros
-- `cupons/` — campanhas e cupons ativos
-- `categorias/` — navegação por categoria
-- `sites/` — navegação por loja/marketplace
-- `aprovados/` — produtos aprovados/curadoria forte
-- `grupos/` — WhatsApp, Telegram e redes sociais
-- `data/produtos.json` — base de produtos
-- `data/campanhas.json` — base de campanhas/cupons
-- `data/config.json` — links oficiais
+## Estrutura correta
 
-## Como subir no GitHub
+Envie o conteúdo deste pacote para a raiz do repositório:
 
-1. Extraia o ZIP.
-2. Envie todo o conteúdo para a raiz do repositório `prometria-site`.
-3. Faça commit.
-4. Aguarde o GitHub Pages atualizar.
+```txt
+prometria-site/
+├── index.html
+├── .nojekyll
+├── assets/
+├── data/
+├── docs/
+├── ofertas/
+├── cupons/
+├── categorias/
+├── sites/
+├── aprovados/
+└── grupos/
+```
 
-## Observação
+## URLs esperadas
 
-O site não busca diretamente nos marketplaces. Ele lê os arquivos JSON da pasta `data/`.
-Quando a automação ficar pronta, ela poderá atualizar `produtos.json` e `campanhas.json`.
+```txt
+https://prometria-br.github.io/prometria-site/
+https://prometria-br.github.io/prometria-site/ofertas/
+https://prometria-br.github.io/prometria-site/cupons/
+https://prometria-br.github.io/prometria-site/categorias/
+https://prometria-br.github.io/prometria-site/sites/
+https://prometria-br.github.io/prometria-site/aprovados/
+https://prometria-br.github.io/prometria-site/grupos/
+```
+
+## Preços
+
+Produtos de teste estão sem preço. O card mostra "Ver preço atualizado".
+
+Quando a automação estiver pronta, atualize `data/produtos.json` com campos como:
+
+```json
+{
+  "title": "Nome do produto",
+  "marketplace": "Amazon",
+  "category": "Setup e escritório",
+  "price": 323.90,
+  "finalPrice": 288.90,
+  "coupon": "PODECOMPRAR",
+  "affiliateUrl": "https://..."
+}
+```

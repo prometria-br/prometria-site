@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Periféricos gamer",
+    "description": "Mouses, teclados, headsets, controles e acessórios para setup."
+  },
+  {
+    "name": "Eletrônicos",
+    "description": "Tecnologia, áudio, gadgets e itens conectados."
+  },
+  {
+    "name": "Casa e cozinha",
+    "description": "Achados úteis para facilitar o dia a dia."
+  },
+  {
+    "name": "Setup e escritório",
+    "description": "Organização, produtividade e ambiente de trabalho."
+  },
+  {
+    "name": "Celulares e acessórios",
+    "description": "Capinhas, carregadores, suportes e acessórios."
+  },
+  {
+    "name": "Cupons e campanhas",
+    "description": "Campanhas com tempo limitado e cupons de marketplace."
+  },
+  {
+    "name": "Produtos aprovados",
+    "description": "Itens avaliados ou destacados pela curadoria Prometria."
+  },
+  {
+    "name": "Achadinhos úteis",
+    "description": "Produtos simples, práticos e com boa proposta."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Amazon",
+    "description": "Ofertas, cupons e campanhas selecionadas da Amazon."
+  },
+  {
+    "name": "Shopee",
+    "description": "Cupons, campanhas e achadinhos da Shopee."
+  },
+  {
+    "name": "AliExpress",
+    "description": "Produtos importados, campanhas globais e cupons."
+  },
+  {
+    "name": "Mercado Livre",
+    "description": "Achados nacionais, tecnologia e produtos úteis."
+  },
+  {
+    "name": "Magalu",
+    "description": "Campanhas e ofertas nacionais quando disponíveis."
+  }
+]
