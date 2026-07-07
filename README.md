@@ -1,72 +1,58 @@
-# Prometria — site estático para GitHub Pages
+# Prometria Site V5 Clean
 
-Site estático em HTML, CSS e JavaScript puro, preparado para GitHub Pages.
+Versão ajustada com:
 
-## Páginas
+- logo oficial sem fundo preto;
+- homepage mais curta, clara e objetiva;
+- menu com "Sites e Categorias";
+- links oficiais de WhatsApp, Telegram e redes sociais em JSON;
+- ofertas e cupons em arquivos separados;
+- sem produtos, preços ou cupons inventados.
 
-- `index.html` — Homepage
-- `ofertas.html` — Ofertas e cupons ativos
-- `sites-categorias.html` — Ofertas por site e categorias
-- `redes.html` — WhatsApp, Telegram e redes sociais
-
-## Dados editáveis
-
-Os dados ficam em `data/`:
-
-- `offers.json` — produtos/ofertas
-- `coupons.json` — cupons/campanhas
-- `categories.json` — categorias
-- `platforms.json` — sites/plataformas
-- `channels.json` — canais oficiais
-- `settings.json` — configurações gerais
-
-Por segurança, `offers.json` e `coupons.json` estão vazios. Assim não há ofertas, preços ou cupons inventados no site.
-
-Use `data/offers.example.json` e `data/coupons.example.json` como referência de preenchimento.
-
-## Publicação no GitHub Pages
-
-Suba todo o conteúdo deste pacote na raiz do repositório.
-
-Estrutura correta:
+## Arquivos principais
 
 ```txt
-prometria-site/
-├── index.html
-├── ofertas.html
-├── sites-categorias.html
-├── redes.html
-├── .nojekyll
-├── assets/
-├── data/
-├── docs/
-└── README.md
+index.html
+ofertas.html
+sites-categorias.html
+redes.html
+assets/css/styles.css
+assets/js/main.js
+data/offers.json
+data/coupons.json
+data/channels.json
+data/settings.json
+docs/COMO_ADICIONAR_OFERTAS_E_LINKS.md
 ```
 
-## Como ocultar ofertas/cupons
+## Como adicionar ofertas
 
-O site só exibe itens com:
-
-```json
-"status": "ativo"
-```
-
-Cupons com classificação `fraco` ou `rejeitado` não aparecem, mesmo se estiverem ativos.
-
-
-
-## Logo oficial
-
-Este pacote usa os arquivos de logo enviados anteriormente:
+Editar:
 
 ```txt
-assets/img/prometria-logo-horizontal.png
-assets/img/prometria-logo-vertical.jpg
-assets/img/prometria-symbol.png
+data/offers.json
 ```
 
-A logo principal usada no header é:
+## Como adicionar cupons
+
+Editar:
 
 ```txt
-assets/img/prometria-logo-horizontal.png
+data/coupons.json
+```
+
+Modelos:
+
+```txt
+data/offers.example.json
+data/coupons.example.json
+```
+
+## Links sociais
+
+Editar, se necessário:
+
+```txt
+data/settings.json
+data/channels.json
 ```

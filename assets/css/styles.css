@@ -88,3 +88,144 @@ h3{font-size:19px;line-height:1.25;margin:0 0 8px}.gradient{background:linear-gr
     max-width: 165px;
   }
 }
+
+
+/* ===== Ajustes V5 Prometria clean ===== */
+.brand-logo,
+.logo-img,
+.site-logo {
+  height: 46px;
+  max-width: 210px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.brand,
+.logo,
+.header-logo {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.header,
+.site-header {
+  background: rgba(255,255,255,.92) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #eee6ff;
+}
+
+.hero {
+  padding-top: 56px !important;
+  padding-bottom: 42px !important;
+}
+
+.hero .container,
+.hero-grid {
+  min-height: auto !important;
+}
+
+.hero-title,
+h1 {
+  max-width: 820px;
+}
+
+.home-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.home-compact-card {
+  background: #fff;
+  border: 1px solid #eadffd;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 12px 36px rgba(39, 10, 77, .07);
+}
+
+.home-compact-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.home-compact-card p {
+  margin: 0;
+  color: #746a86;
+  line-height: 1.55;
+}
+
+.home-platform-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.home-platform-strip a,
+.home-platform-strip span {
+  display: inline-flex;
+  padding: 10px 14px;
+  border: 1px solid #eadffd;
+  border-radius: 999px;
+  background: #fff;
+  color: #5B20E8;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.section-condensed {
+  padding: 42px 0 !important;
+}
+
+.notice-box {
+  border: 1px solid #eadffd;
+  background: #fbfaff;
+  border-radius: 22px;
+  padding: 18px;
+  color: #746a86;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.empty-state {
+  border: 1px dashed #d8c7ff;
+  background: #fbfaff;
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
+  color: #746a86;
+}
+
+.data-help {
+  margin-top: 22px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #eadffd;
+  border-radius: 22px;
+}
+
+.data-help code {
+  background: #f7f3ff;
+  color: #5B20E8;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+@media (max-width: 860px) {
+  .home-compact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-logo,
+  .logo-img,
+  .site-logo {
+    height: 40px;
+    max-width: 176px;
+  }
+}

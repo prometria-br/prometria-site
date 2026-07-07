@@ -1,18 +1,18 @@
 [
   {
-    "id": "exemplo-oferta-001",
-    "nome": "Nome do produto",
+    "id": "exemplo-001",
+    "nome": "Nome real do produto",
     "plataforma": "Amazon",
     "categoria": "Setup e escritório",
-    "imagem": "assets/img/placeholder-product.svg",
-    "precoAtual": 299.9,
-    "precoAntigo": 349.9,
-    "cupom": "CUPOMFORTE",
-    "precoComCupom": 269.9,
-    "linkAfiliado": "https://...",
+    "imagem": "https://link-da-imagem-do-produto.jpg",
+    "precoAtual": 288.9,
+    "precoAntigo": 323.9,
+    "cupom": "PODECOMPRAR",
+    "precoComCupom": 253.9,
+    "linkAfiliado": "https://seu-link-afiliado.com",
     "status": "ativo",
     "validade": "2026-12-31T23:59:00-03:00",
     "destaque": true,
-    "observacao": "Preço sujeito a alteração."
+    "observacao": "Preço e disponibilidade podem mudar."
   }
 ]
