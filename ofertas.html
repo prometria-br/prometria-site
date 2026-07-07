@@ -1,4 +1,87 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prometria | Ofertas e cupons ativos</title><meta name="description" content="Ofertas, cupons e campanhas ativos selecionados pela Prometria."><meta name="theme-color" content="#6424f2"><meta property="og:title" content="Prometria | Ofertas e cupons ativos"><meta property="og:description" content="Ofertas, cupons e campanhas ativos selecionados pela Prometria."><meta property="og:type" content="website"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="icon" href="assets/img/favicon.png"><link rel="stylesheet" href="assets/css/styles.css"></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="header"><div class="container header__inner"><a class="logo" href="index.html" aria-label="Prometria"><img class="brand-logo" src="assets/img/prometria-logo-clean.png" alt="Prometria - ofertas inteligentes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"> <span class="logo__fallback" style="display:none"><span class="logo__mark">P</span><span>prometria</span></span></a><nav class="nav" data-nav aria-label="Menu principal"><a href="index.html" class="">Início</a><a href="ofertas.html" class="active">Ofertas e Cupons</a><a href="sites-categorias.html" class="">Sites e Categorias</a><a href="redes.html" class="">Redes Sociais</a></nav><div class="header__actions"><a class="btn btn--primary" href="redes.html">Entrar no grupo</a><button class="menu-btn" type="button" data-menu-button aria-expanded="false">Menu</button></div></div></header><main id="conteudo">
-<section class="page-hero"><div class="container"><span class="eyebrow">Ofertas e cupons ativos</span><h1>Ofertas e cupons ativos</h1><p class="lead">Confira campanhas, cupons e produtos selecionados pela Prometria enquanto ainda estão disponíveis.</p><div class="tabs" role="tablist" aria-label="Tipo de item"><button class="tab active" data-tab="todos" type="button">Todos</button><button class="tab" data-tab="cupons" type="button">Cupons ativos</button><button class="tab" data-tab="ofertas" type="button">Ofertas ativas</button><button class="tab" data-tab="campanhas" type="button">Campanhas</button></div><div class="filters"><input class="field" data-filter-search type="search" placeholder="Buscar oferta, cupom ou campanha..."><select class="field" data-filter-platform aria-label="Filtrar por plataforma"><option value="">Todas as plataformas</option></select><select class="field" data-filter-category aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select><span class="field count" data-count>0 item(ns)</span></div></div></section>
-<section class="section"><div class="container"><div class="list-grid" data-results></div><p class="legal">Somente itens com status ativo aparecem aqui. Cupons fracos, rejeitados, vencidos ou inativos são ocultados automaticamente pelo JavaScript.</p></div></section>
-</main><footer class="footer"><div class="container footer__grid"><div><img class="footer__logo" src="assets/img/prometria-logo-clean.png" alt="Prometria"><p>A Prometria é uma curadoria de ofertas inteligentes. Não somos loja; divulgamos ofertas e links de afiliado de plataformas parceiras.</p><p class="legal">Preços, cupons, frete, estoque e disponibilidade podem mudar sem aviso prévio. Alguns links podem ser links de afiliado.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="ofertas.html">Ofertas e Cupons</a><a href="sites-categorias.html">Sites e Categorias</a><a href="redes.html">Redes Sociais</a></div></div></footer><script src="assets/js/main.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prometria | Ofertas e cupons ativos</title>
+  <meta name="description" content="Prometria - ofertas inteligentes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/prometria-symbol.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html" aria-label="Prometria">
+      <img class="brand-symbol" src="assets/img/prometria-symbol.png" alt="">
+      <span class="brand-text">
+        <span class="brand-name">prometria</span>
+        <span class="brand-tagline">ofertas inteligentes</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a class="active" href="ofertas.html">Ofertas e Cupons</a>
+      <a href="sites-categorias.html">Sites e Categorias</a>
+      <a href="redes.html">Redes Sociais</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn primary" href="redes.html#whatsapp">Entrar no grupo</a>
+      <button class="menu-btn" type="button">Menu</button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    
+<section class="page-head">
+  <div class="container">
+    <span class="kicker">Atualizações ativas</span>
+    <h1>Ofertas e cupons ativos</h1>
+    <p class="lead">Confira campanhas, cupons e produtos selecionados pela Prometria enquanto estiverem disponíveis.</p>
+    <div class="filters">
+      <input id="search" class="input" type="search" placeholder="Buscar...">
+      <select id="typeFilter" class="select">
+        <option value="">Todos</option>
+        <option value="cupom">Cupons ativos</option>
+        <option value="oferta">Ofertas ativas</option>
+      </select>
+      <select id="platformFilter" class="select">
+        <option value="">Todas as plataformas</option>
+        <option>Amazon</option>
+        <option>AliExpress</option>
+        <option>Shopee</option>
+        <option>Mercado Livre</option>
+        <option>Magalu</option>
+      </select>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div id="offersGrid" class="list-grid"></div>
+    <div class="data-note">
+      Para publicar ofertas reais, edite <code>data/offers.json</code>. Para publicar cupons reais, edite <code>data/coupons.json</code>. Os modelos ficam em <code>data/offers.example.json</code> e <code>data/coupons.example.json</code>.
+    </div>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="footer">
+  <div class="container footer-inner">
+    <p><strong>Prometria</strong> — curadoria de ofertas inteligentes. Alguns links podem ser links de afiliado.</p>
+    <div class="footer-links">
+      <a href="ofertas.html">Ofertas</a>
+      <a href="sites-categorias.html">Sites e Categorias</a>
+      <a href="redes.html">Canais</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 [
   {
-    "id": "exemplo-001",
+    "id": "oferta-001",
     "nome": "Nome real do produto",
     "plataforma": "Amazon",
     "categoria": "Setup e escritório",
-    "imagem": "https://link-da-imagem-do-produto.jpg",
+    "imagem": "https://link-da-imagem.jpg",
     "precoAtual": 288.9,
     "precoAntigo": 323.9,
     "cupom": "PODECOMPRAR",

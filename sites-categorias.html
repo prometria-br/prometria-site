@@ -1,5 +1,79 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prometria | Ofertas por site e categorias</title><meta name="description" content="Ofertas organizadas por plataforma e categoria."><meta name="theme-color" content="#6424f2"><meta property="og:title" content="Prometria | Ofertas por site e categorias"><meta property="og:description" content="Ofertas organizadas por plataforma e categoria."><meta property="og:type" content="website"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="icon" href="assets/img/favicon.png"><link rel="stylesheet" href="assets/css/styles.css"></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="header"><div class="container header__inner"><a class="logo" href="index.html" aria-label="Prometria"><img class="brand-logo" src="assets/img/prometria-logo-clean.png" alt="Prometria - ofertas inteligentes" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"> <span class="logo__fallback" style="display:none"><span class="logo__mark">P</span><span>prometria</span></span></a><nav class="nav" data-nav aria-label="Menu principal"><a href="index.html" class="">Início</a><a href="ofertas.html" class="">Ofertas e Cupons</a><a href="sites-categorias.html" class="active">Sites e Categorias</a><a href="redes.html" class="">Redes Sociais</a></nav><div class="header__actions"><a class="btn btn--primary" href="redes.html">Entrar no grupo</a><button class="menu-btn" type="button" data-menu-button aria-expanded="false">Menu</button></div></div></header><main id="conteudo">
-<section class="page-hero"><div class="container"><span class="eyebrow">Sites e categorias</span><h1>Ofertas por site e categoria</h1><p class="lead">Escolha uma plataforma ou categoria para encontrar ofertas selecionadas pela Prometria.</p></div></section>
-<section class="section"><div class="container"><div class="section__head"><div><h2>Por site</h2><p class="section__text">Navegue pelas principais plataformas acompanhadas.</p></div></div><div class="grid grid--4" data-platform-grid></div></div></section>
-<section class="section section--soft"><div class="container"><div class="section__head"><div><h2>Por categoria</h2><p class="section__text">Encontre produtos por tipo de uso ou interesse.</p></div></div><div class="grid grid--4" data-category-grid></div></div></section>
-</main><footer class="footer"><div class="container footer__grid"><div><img class="footer__logo" src="assets/img/prometria-logo-clean.png" alt="Prometria"><p>A Prometria é uma curadoria de ofertas inteligentes. Não somos loja; divulgamos ofertas e links de afiliado de plataformas parceiras.</p><p class="legal">Preços, cupons, frete, estoque e disponibilidade podem mudar sem aviso prévio. Alguns links podem ser links de afiliado.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="ofertas.html">Ofertas e Cupons</a><a href="sites-categorias.html">Sites e Categorias</a><a href="redes.html">Redes Sociais</a></div></div></footer><script src="assets/js/main.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prometria | Sites e Categorias</title>
+  <meta name="description" content="Prometria - ofertas inteligentes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/img/prometria-symbol.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html" aria-label="Prometria">
+      <img class="brand-symbol" src="assets/img/prometria-symbol.png" alt="">
+      <span class="brand-text">
+        <span class="brand-name">prometria</span>
+        <span class="brand-tagline">ofertas inteligentes</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="ofertas.html">Ofertas e Cupons</a>
+      <a class="active" href="sites-categorias.html">Sites e Categorias</a>
+      <a href="redes.html">Redes Sociais</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn primary" href="redes.html#whatsapp">Entrar no grupo</a>
+      <button class="menu-btn" type="button">Menu</button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    
+<section class="page-head">
+  <div class="container">
+    <span class="kicker">Navegação</span>
+    <h1>Sites e Categorias</h1>
+    <p class="lead">Escolha uma plataforma ou categoria para encontrar ofertas selecionadas pela Prometria.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-title-row">
+      <div><h2>Por site</h2><p>Principais plataformas monitoradas.</p></div>
+    </div>
+    <div id="platformsGrid" class="grid grid-3"></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-title-row">
+      <div><h2>Por categoria</h2><p>Tipos de produtos e campanhas que podem aparecer na curadoria.</p></div>
+    </div>
+    <div id="categoriesGrid" class="grid grid-4"></div>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="footer">
+  <div class="container footer-inner">
+    <p><strong>Prometria</strong> — curadoria de ofertas inteligentes. Alguns links podem ser links de afiliado.</p>
+    <div class="footer-links">
+      <a href="ofertas.html">Ofertas</a>
+      <a href="sites-categorias.html">Sites e Categorias</a>
+      <a href="redes.html">Canais</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

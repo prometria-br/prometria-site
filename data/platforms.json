@@ -2,25 +2,31 @@
   {
     "id": "amazon",
     "name": "Amazon",
-    "description": "Cupons, campanhas e ofertas selecionadas da Amazon.",
-    "icon": "A"
+    "description": "Cupons, campanhas e produtos selecionados.",
+    "status": "ativo"
   },
   {
     "id": "aliexpress",
     "name": "AliExpress",
-    "description": "Campanhas, cupons e achados importados com curadoria.",
-    "icon": "Ali"
+    "description": "Campanhas, cupons e achados importados.",
+    "status": "ativo"
   },
   {
     "id": "shopee",
     "name": "Shopee",
-    "description": "Campanhas sazonais, cupons e achadinhos úteis.",
-    "icon": "S"
+    "description": "Achadinhos, cupons e campanhas sazonais.",
+    "status": "ativo"
   },
   {
     "id": "mercado-livre",
     "name": "Mercado Livre",
-    "description": "Ofertas nacionais, tecnologia e produtos de uso diário.",
-    "icon": "ML"
+    "description": "Ofertas nacionais e produtos úteis.",
+    "status": "ativo"
+  },
+  {
+    "id": "magalu",
+    "name": "Magalu",
+    "description": "Campanhas nacionais quando disponíveis.",
+    "status": "ativo"
   }
 ]

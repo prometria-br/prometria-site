@@ -5,7 +5,8 @@
     "description": "Receba ofertas selecionadas direto no grupo.",
     "url": "https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78",
     "label": "Entrar no WhatsApp",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "🟢"
   },
   {
     "id": "telegram",
@@ -13,38 +14,43 @@
     "description": "Acompanhe cupons e campanhas em tempo real.",
     "url": "https://t.me/prometriabr",
     "label": "Entrar no Telegram",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "🔵"
   },
   {
     "id": "instagram",
     "name": "Instagram",
-    "description": "Veja posts, carrosséis e produtos destacados.",
+    "description": "Posts, carrosséis e produtos destacados.",
     "url": "https://www.instagram.com/prometriabr/",
     "label": "Seguir no Instagram",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "📸"
   },
   {
     "id": "tiktok",
     "name": "TikTok",
-    "description": "Achados rápidos e conteúdos curtos de ofertas.",
+    "description": "Achados rápidos e conteúdos curtos.",
     "url": "https://www.tiktok.com/@prometriabr",
     "label": "Seguir no TikTok",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "🎵"
   },
   {
     "id": "x",
     "name": "X / Twitter",
-    "description": "Chamadas rápidas e atualizações da Prometria.",
+    "description": "Chamadas rápidas e atualizações.",
     "url": "https://x.com/Prometriabr",
     "label": "Seguir no X",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "𝕏"
   },
   {
     "id": "linktree",
     "name": "Linktree",
-    "description": "Todos os links oficiais da Prometria em um só lugar.",
+    "description": "Todos os links oficiais em um só lugar.",
     "url": "https://linktr.ee/prometria",
     "label": "Abrir Linktree",
-    "status": "ativo"
+    "status": "ativo",
+    "icon": "🔗"
   }
 ]

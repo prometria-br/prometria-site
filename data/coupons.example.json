@@ -1,8 +1,8 @@
 [
   {
-    "id": "cupom-exemplo-001",
+    "id": "cupom-001",
     "plataforma": "Amazon",
-    "nomeCampanha": "Cupom exemplo Amazon",
+    "nomeCampanha": "Cupom Amazon",
     "codigo": "PODECOMPRAR",
     "desconto": "R$ 35 OFF",
     "valorMinimo": "R$ 299",
