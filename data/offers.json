@@ -1,5 +1,23 @@
 [
   {
+    "id": "amazon-xiaomi-redmi-buds-6-play-bpuauy",
+    "nome": "Xiaomi Redmi Buds 6 Play",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/51DVGGv77KL.jpg",
+    "precoAtual": 91.3,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4w0QP5d",
+    "status": "ativo",
+    "validade": "",
+    "destaque": true,
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #8 Avaliação: 4,6 de 5 estrelas",
+    "atualizadoEm": "2026-07-07T16:45:22.020Z",
+    "criadoEm": "2026-07-07T16:45:22.020Z"
+  },
+  {
     "id": "aliexpress-essager-15w-fast-wireless-carregador-for-iphone-14-p6v43v",
     "nome": "Essager 15W Fast Wireless carregador For iPhone 14 13 12 For Airpods Visible Qi Wireless...",
     "plataforma": "AliExpress",
