@@ -1,0 +1,18 @@
+[
+  {
+    "id": "exemplo-oferta-001",
+    "nome": "Nome do produto",
+    "plataforma": "Amazon",
+    "categoria": "Setup e escritório",
+    "imagem": "assets/img/placeholder-product.svg",
+    "precoAtual": 299.9,
+    "precoAntigo": 349.9,
+    "cupom": "CUPOMFORTE",
+    "precoComCupom": 269.9,
+    "linkAfiliado": "https://...",
+    "status": "ativo",
+    "validade": "2026-12-31T23:59:00-03:00",
+    "destaque": true,
+    "observacao": "Preço sujeito a alteração."
+  }
+]

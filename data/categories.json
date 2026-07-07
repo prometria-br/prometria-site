@@ -1,0 +1,50 @@
+[
+  {
+    "id": "perifericos-gamer",
+    "name": "Periféricos gamer",
+    "description": "Mouses, teclados, headsets, controles e acessórios.",
+    "icon": "🎮"
+  },
+  {
+    "id": "eletronicos",
+    "name": "Eletrônicos",
+    "description": "Tecnologia, áudio, gadgets e produtos conectados.",
+    "icon": "⚡"
+  },
+  {
+    "id": "celulares-acessorios",
+    "name": "Celulares e acessórios",
+    "description": "Capas, carregadores, suportes, cabos e acessórios.",
+    "icon": "📱"
+  },
+  {
+    "id": "casa-cozinha",
+    "name": "Casa e cozinha",
+    "description": "Itens úteis para organização, preparo e dia a dia.",
+    "icon": "🏠"
+  },
+  {
+    "id": "setup-escritorio",
+    "name": "Setup e escritório",
+    "description": "Produtos para produtividade, mesa, cadeira e trabalho.",
+    "icon": "🖥️"
+  },
+  {
+    "id": "cupons",
+    "name": "Cupons",
+    "description": "Campanhas e códigos com boa vantagem real.",
+    "icon": "🎟️"
+  },
+  {
+    "id": "produtos-aprovados",
+    "name": "Produtos aprovados",
+    "description": "Itens avaliados, destacados ou aprovados pela curadoria.",
+    "icon": "👍"
+  },
+  {
+    "id": "achadinhos-uteis",
+    "name": "Achadinhos úteis",
+    "description": "Produtos práticos, simples e com boa proposta.",
+    "icon": "✨"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "whatsapp",
+    "name": "WhatsApp",
+    "description": "Receba ofertas selecionadas direto no grupo.",
+    "url": "https://chat.whatsapp.com/C0VK6VCA1797UNlwfASj78",
+    "button": "Entrar no WhatsApp",
+    "icon": "🟢",
+    "featured": true
+  },
+  {
+    "id": "telegram",
+    "name": "Telegram",
+    "description": "Acompanhe cupons e campanhas em tempo real.",
+    "url": "https://t.me/prometriabr",
+    "button": "Entrar no Telegram",
+    "icon": "🔵",
+    "featured": true
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "description": "Veja posts, carrosséis e produtos destacados.",
+    "url": "https://www.instagram.com/prometriabr/",
+    "button": "Seguir no Instagram",
+    "icon": "📸",
+    "featured": false
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok",
+    "description": "Conteúdos rápidos, achados e chamadas de ofertas.",
+    "url": "https://www.tiktok.com/@prometriabr",
+    "button": "Seguir no TikTok",
+    "icon": "🎵",
+    "featured": false
+  },
+  {
+    "id": "x",
+    "name": "X / Twitter",
+    "description": "Atualizações rápidas e chamadas para campanhas.",
+    "url": "https://x.com/Prometriabr",
+    "button": "Seguir no X",
+    "icon": "𝕏",
+    "featured": false
+  },
+  {
+    "id": "linktree",
+    "name": "Linktree",
+    "description": "Todos os links oficiais da Prometria em um lugar.",
+    "url": "https://linktr.ee/prometria",
+    "button": "Abrir Linktree",
+    "icon": "🔗",
+    "featured": false
+  }
+]

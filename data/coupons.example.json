@@ -1,0 +1,16 @@
+[
+  {
+    "id": "exemplo-cupom-001",
+    "plataforma": "Shopee",
+    "nomeCampanha": "Campanha exemplo",
+    "codigo": "CUPOMFORTE",
+    "desconto": "R$30 OFF",
+    "valorMinimo": "R$150",
+    "categoria": "Cupons",
+    "linkCampanha": "https://...",
+    "status": "ativo",
+    "validade": "2026-12-31T23:59:00-03:00",
+    "classificacao": "forte",
+    "observacao": "Sujeito a alteração."
+  }
+]

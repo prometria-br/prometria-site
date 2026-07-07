@@ -1,0 +1,26 @@
+[
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "description": "Cupons, campanhas e ofertas selecionadas da Amazon.",
+    "icon": "A"
+  },
+  {
+    "id": "aliexpress",
+    "name": "AliExpress",
+    "description": "Campanhas, cupons e achados importados com curadoria.",
+    "icon": "Ali"
+  },
+  {
+    "id": "shopee",
+    "name": "Shopee",
+    "description": "Campanhas sazonais, cupons e achadinhos úteis.",
+    "icon": "S"
+  },
+  {
+    "id": "mercado-livre",
+    "name": "Mercado Livre",
+    "description": "Ofertas nacionais, tecnologia e produtos de uso diário.",
+    "icon": "ML"
+  }
+]

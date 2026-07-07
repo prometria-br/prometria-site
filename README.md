@@ -1,55 +1,72 @@
-# Prometria Site V3 — multipáginas real
+# Prometria — site estático para GitHub Pages
 
-Esta versão corrige dois pontos:
+Site estático em HTML, CSS e JavaScript puro, preparado para GitHub Pages.
 
-1. O site não é mais uma landing page única com âncoras.
-2. Os produtos de teste não exibem preços fixos para evitar valores errados no ar.
+## Páginas
 
-## Estrutura correta
+- `index.html` — Homepage
+- `ofertas.html` — Ofertas e cupons ativos
+- `sites-categorias.html` — Ofertas por site e categorias
+- `redes.html` — WhatsApp, Telegram e redes sociais
 
-Envie o conteúdo deste pacote para a raiz do repositório:
+## Dados editáveis
+
+Os dados ficam em `data/`:
+
+- `offers.json` — produtos/ofertas
+- `coupons.json` — cupons/campanhas
+- `categories.json` — categorias
+- `platforms.json` — sites/plataformas
+- `channels.json` — canais oficiais
+- `settings.json` — configurações gerais
+
+Por segurança, `offers.json` e `coupons.json` estão vazios. Assim não há ofertas, preços ou cupons inventados no site.
+
+Use `data/offers.example.json` e `data/coupons.example.json` como referência de preenchimento.
+
+## Publicação no GitHub Pages
+
+Suba todo o conteúdo deste pacote na raiz do repositório.
+
+Estrutura correta:
 
 ```txt
 prometria-site/
 ├── index.html
+├── ofertas.html
+├── sites-categorias.html
+├── redes.html
 ├── .nojekyll
 ├── assets/
 ├── data/
 ├── docs/
-├── ofertas/
-├── cupons/
-├── categorias/
-├── sites/
-├── aprovados/
-└── grupos/
+└── README.md
 ```
 
-## URLs esperadas
+## Como ocultar ofertas/cupons
 
-```txt
-https://prometria-br.github.io/prometria-site/
-https://prometria-br.github.io/prometria-site/ofertas/
-https://prometria-br.github.io/prometria-site/cupons/
-https://prometria-br.github.io/prometria-site/categorias/
-https://prometria-br.github.io/prometria-site/sites/
-https://prometria-br.github.io/prometria-site/aprovados/
-https://prometria-br.github.io/prometria-site/grupos/
-```
-
-## Preços
-
-Produtos de teste estão sem preço. O card mostra "Ver preço atualizado".
-
-Quando a automação estiver pronta, atualize `data/produtos.json` com campos como:
+O site só exibe itens com:
 
 ```json
-{
-  "title": "Nome do produto",
-  "marketplace": "Amazon",
-  "category": "Setup e escritório",
-  "price": 323.90,
-  "finalPrice": 288.90,
-  "coupon": "PODECOMPRAR",
-  "affiliateUrl": "https://..."
-}
+"status": "ativo"
+```
+
+Cupons com classificação `fraco` ou `rejeitado` não aparecem, mesmo se estiverem ativos.
+
+
+
+## Logo oficial
+
+Este pacote usa os arquivos de logo enviados anteriormente:
+
+```txt
+assets/img/prometria-logo-horizontal.png
+assets/img/prometria-logo-vertical.jpg
+assets/img/prometria-symbol.png
+```
+
+A logo principal usada no header é:
+
+```txt
+assets/img/prometria-logo-horizontal.png
 ```
