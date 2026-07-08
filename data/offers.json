@@ -1,5 +1,23 @@
 [
   {
+    "id": "shopee-mini-chapinha-de-cabelo-bivolt-nlb-001-1fnx46",
+    "nome": "Mini Chapinha de Cabelo Bivolt - NLB-001",
+    "plataforma": "Shopee",
+    "categoria": "Shopee",
+    "imagem": "https://cf.shopee.com.br/file/sg-11134202-7rdyf-mcs1wlrrwxs0df",
+    "precoAtual": 92,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://s.shopee.com.br/AUsG4PCcP4",
+    "status": "ativo",
+    "validade": "",
+    "destaque": true,
+    "observacao": "Preço e disponibilidade podem mudar. Vendas: 0. Avaliação: 0. Comissão: 0.28.",
+    "atualizadoEm": "2026-07-08T19:00:04.175Z",
+    "criadoEm": "2026-07-08T19:00:04.175Z"
+  },
+  {
     "id": "amazon-dispostivo-de-protecao-eletrica-eps-301-branco-int-s3f1lt",
     "nome": "Dispostivo de Proteção Elétrica EPS 301 Branco Intelbras",
     "plataforma": "Amazon",
