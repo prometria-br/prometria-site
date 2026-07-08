@@ -1,5 +1,23 @@
 [
   {
+    "id": "amazon-dispostivo-de-protecao-eletrica-eps-301-branco-int-s3f1lt",
+    "nome": "Dispostivo de Proteção Elétrica EPS 301 Branco Intelbras",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/41zAQ0BWtUL.jpg",
+    "precoAtual": 44.9,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/3SQQtQ3",
+    "status": "ativo",
+    "validade": "",
+    "destaque": true,
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #13 Avaliação: 4,8 de 5 estrelas",
+    "atualizadoEm": "2026-07-08T18:45:22.692Z",
+    "criadoEm": "2026-07-08T18:45:22.692Z"
+  },
+  {
     "id": "mercado-livre-cabo-tripolar-10a-3x075mm-mickey-1-50m-bm-8685-7zlclo",
     "nome": "Cabo Tripolar 10a 3x075mm Mickey 1,50m Bm-8685",
     "plataforma": "Mercado Livre",
