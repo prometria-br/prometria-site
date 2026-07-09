@@ -1,5 +1,23 @@
 [
   {
+    "id": "amazon-achocolatado-nescau-2-01kg-c5s7wc",
+    "nome": "Achocolatado NESCAU® 2,01kg",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/61fgMVvEKiL.jpg",
+    "precoAtual": 38.99,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4v1otHm",
+    "status": "ativo",
+    "validade": "",
+    "destaque": true,
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #3 Avaliação: 4,9 de 5 estrelas",
+    "atualizadoEm": "2026-07-09T00:45:23.184Z",
+    "criadoEm": "2026-07-09T00:45:23.184Z"
+  },
+  {
     "id": "aliexpress-ugreen-usb-c-to-usb-type-b-2-0-cabo-for-macbook-pr-chbnfn",
     "nome": "Ugreen USB-C to USB Type B 2.0 cabo for MacBook Pro HP Canon Brother Epson Dell Samsung...",
     "plataforma": "AliExpress",
