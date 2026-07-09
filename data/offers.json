@@ -1,5 +1,23 @@
 [
   {
+    "id": "amazon-mouse-pad-preto-irj2tt",
+    "nome": "Mouse Pad Preto",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/31OpUHaGqQL.jpg",
+    "precoAtual": 7.11,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4h3dQQi",
+    "status": "ativo",
+    "validade": "",
+    "destaque": true,
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #18 Avaliação: 4,2 de 5 estrelas",
+    "atualizadoEm": "2026-07-09T01:45:22.029Z",
+    "criadoEm": "2026-07-09T01:45:22.029Z"
+  },
+  {
     "id": "mercado-livre-pegador-para-carne-churrasco-inox-e-madeira-47cm-r-1ekmfs",
     "nome": "Pegador Para Carne Churrasco Inox E Madeira 47cm Resistente",
     "plataforma": "Mercado Livre",
