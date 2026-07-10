@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-chinelo-olympikus-921-masculino-e6sglx",
+    "nome": "Chinelo Olympikus 921 Masculino",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/516KUClR+xL.jpg",
+    "precoAtual": 89.99,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4pgY1ro",
+    "status": "ativo",
+    "validade": "2026-07-11T03:45:19.313Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #14 Avaliação: 4,7 de 5 estrelas",
+    "atualizadoEm": "2026-07-10T15:45:19.536Z",
+    "criadoEm": "2026-07-10T15:45:19.536Z"
+  },
+  {
     "id": "aliexpress-8bitdo-retro-receiver-for-snes-super-nintendo-fami-xg5zja",
     "nome": "8Bitdo Retro Receiver For SNES/ Super Nintendo/Famicom System Support For Xbox/Switch...",
     "plataforma": "AliExpress",
