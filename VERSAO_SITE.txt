@@ -1,1 +1,1 @@
-Prometria Site V8 - refinamento visual, cards melhores e rodapé padronizado
+Prometria Site V9 - cards refinados e validade automática no publicador
