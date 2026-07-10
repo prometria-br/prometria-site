@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-caixa-de-pilha-aaa-com-40-unidades-elgin-palito-tu-silyfp",
+    "nome": "Caixa de Pilha AAA com 40 unidades Elgin Palito - Tubo, Zinco",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/51wlcSTwZsL.jpg",
+    "precoAtual": 27.5,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/44mFf8u",
+    "status": "ativo",
+    "validade": "2026-07-11T00:45:15.928Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #6 Avaliação: 4,7 de 5 estrelas",
+    "atualizadoEm": "2026-07-10T12:45:16.349Z",
+    "criadoEm": "2026-07-10T12:45:16.349Z"
+  },
+  {
     "id": "aliexpress-8bitdo-ngc-retro-receiver-adapter-for-nintendo-gam-nvph58",
     "nome": "8BitDo NGC Retro Receiver Adapter For Nintendo GameCube Windows 10, 11, Compatible with Xbox...",
     "plataforma": "AliExpress",
