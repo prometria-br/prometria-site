@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-pilha-rayovac-alcalina-208013-azul-aa-pequena-paco-lded3c",
+    "nome": "Pilha, Rayovac, Alcalina 208013, Azul, Aa, Pequena, Pacote de 4",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/61UQIBFEmeL.jpg",
+    "precoAtual": 22.3,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4bCNFfF",
+    "status": "ativo",
+    "validade": "2026-07-15T11:45:22.204Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #30 Avaliação: 4,8 de 5 estrelas",
+    "atualizadoEm": "2026-07-14T23:45:22.483Z",
+    "criadoEm": "2026-07-14T23:45:22.483Z"
+  },
+  {
     "id": "aliexpress-inphic-in9-tri-mode-mouse-gamer-sem-fio-bluetooth--ouvvyw",
     "nome": "INPHIC IN9 tri-mode mouse gamer sem fio Bluetooth 2.4G Wired 12000DPI RGB RGB recarregável...",
     "plataforma": "AliExpress",
