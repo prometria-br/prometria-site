@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-mochila-kipling-rylie-ivnysi",
+    "nome": "Mochila Kipling Rylie",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/71bOSLFYMUL.jpg",
+    "precoAtual": 143.99,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4gKTKdH",
+    "status": "ativo",
+    "validade": "2026-07-16T05:45:19.973Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #20 Avaliação: 5,0 de 5 estrelas",
+    "atualizadoEm": "2026-07-15T17:45:20.246Z",
+    "criadoEm": "2026-07-15T17:45:20.246Z"
+  },
+  {
     "id": "aliexpress-50cm-computador-monitor-light-bar-screen-hanging-l-hmwr1f",
     "nome": "50cm computador Monitor Light Bar Screen Hanging Lights Stepless Dimming USB Desk Lamp For...",
     "plataforma": "AliExpress",
