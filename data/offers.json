@@ -1,5 +1,28 @@
 [
   {
+    "id": "shopee-botina-olavo-s-conforto-e-qualidade-bdebe0",
+    "nome": "botina Olavo´S conforto e qualidade",
+    "plataforma": "Shopee",
+    "categoria": "Shopee",
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-820lt-mpc8zsm00lc3b9",
+    "precoAtual": 36.75,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://s.shopee.com.br/6VMP7Kjo4W",
+    "status": "ativo",
+    "validade": "2026-07-20T11:00:03.371Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Vendas: 619. Avaliação: 4.5. Comissão: 0.14.",
+    "atualizadoEm": "2026-07-19T23:00:03.681Z",
+    "criadoEm": "2026-07-19T23:00:03.681Z"
+  },
+  {
     "id": "amazon-tenis-fila-racer-speedzone-feminino-t3oq50",
     "nome": "Tenis Fila Racer Speedzone Feminino",
     "plataforma": "Amazon",
