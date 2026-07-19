@@ -1,5 +1,28 @@
 [
   {
+    "id": "shopee-cinta-de-freio-brastemp-e-consul-gw1wa8",
+    "nome": "Cinta De Freio Brastemp E Consul",
+    "plataforma": "Shopee",
+    "categoria": "Shopee",
+    "imagem": "https://cf.shopee.com.br/file/br-11134207-7r98o-m3071q5wdsyd58",
+    "precoAtual": 23.5,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://s.shopee.com.br/70If7AWHBN",
+    "status": "ativo",
+    "validade": "2026-07-20T02:00:03.620Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Vendas: 0. Avaliação: 4.9. Comissão: 0.39.",
+    "atualizadoEm": "2026-07-19T14:00:03.919Z",
+    "criadoEm": "2026-07-19T14:00:03.919Z"
+  },
+  {
     "id": "amazon-lava-loucas-electrolux-10-servicos-inox-com-progra-svhjl0",
     "nome": "Lava-Louças Electrolux 10 Serviços Inox com Programa Lava e Seca 50min 220v LS10E",
     "plataforma": "Amazon",
