@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-nescafe-dolce-gusto-espresso-10-capsulas-awrwvn",
+    "nome": "Nescafe Dolce Gusto, Espresso, 10 Cápsulas",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/51bF8KrLrzL.jpg",
+    "precoAtual": 16.9,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4weLffL",
+    "status": "ativo",
+    "validade": "2026-07-20T07:45:20.392Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #10 Avaliação: 4,9 de 5 estrelas",
+    "atualizadoEm": "2026-07-19T19:45:20.679Z",
+    "criadoEm": "2026-07-19T19:45:20.679Z"
+  },
+  {
     "id": "aliexpress-scyrox-v8-36g-ultra-light-mouse-gamer-sem-fio-tri--rkw3a6",
     "nome": "Scyrox V8 36g Ultra-Light mouse gamer sem fio tri-mode 30000DPI PAW3950 Sensor RGB Macro FPS...",
     "plataforma": "AliExpress",
