@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-panasonic-micro-ondas-27l-prata-127v-nn-st55lmru-iu0ghm",
+    "nome": "Panasonic Micro-ondas 27L Prata 127v NN-ST55LMRU",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/51fBVKOlMmL.jpg",
+    "precoAtual": 799.9,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4gMsRGi",
+    "status": "ativo",
+    "validade": "2026-07-20T08:45:21.284Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #18 Avaliação: 4,7 de 5 estrelas",
+    "atualizadoEm": "2026-07-19T20:45:21.615Z",
+    "criadoEm": "2026-07-19T20:45:21.615Z"
+  },
+  {
     "id": "aliexpress-x68he-attack-shark-magnetic-gaming-teclado-mechani-i4u6j7",
     "nome": "X68HE ATTACK SHARK Magnetic Gaming teclado Mechanical Wired for Pro Gaming 0.01mm Rapid Trigg...",
     "plataforma": "AliExpress",
