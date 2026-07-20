@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-ab-brasil-achocolatado-com-flocos-crocantes-ovomal-ar0xbm",
+    "nome": "AB Brasil Achocolatado Com Flocos Crocantes Ovomaltine 600G",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/61DJFd9P-fL.jpg",
+    "precoAtual": 34.99,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/4wnzMKP",
+    "status": "ativo",
+    "validade": "2026-07-21T01:45:19.745Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #26 Avaliação: 4,9 de 5 estrelas",
+    "atualizadoEm": "2026-07-20T13:45:20.098Z",
+    "criadoEm": "2026-07-20T13:45:20.098Z"
+  },
+  {
     "id": "aliexpress-rii-i4-mini-bt-wireless-teclado-with-touchpad-2-4g-j37phd",
     "nome": "Rii i4 Mini BT Wireless teclado With Touchpad 2.4GHz retroiluminado Mouse Remote Control",
     "plataforma": "AliExpress",
