@@ -1,5 +1,28 @@
 [
   {
+    "id": "amazon-lyor-vaso-minimal-13-5cm-x-5cm-vidro-rxx6ss",
+    "nome": "LYOR - Vaso Minimal 13,5cm x 5cm Vidro",
+    "plataforma": "Amazon",
+    "categoria": "Amazon",
+    "imagem": "https://images-na.ssl-images-amazon.com/images/I/61NSKnEVoyL.jpg",
+    "precoAtual": 79.9,
+    "precoAntigo": null,
+    "cupom": "",
+    "precoComCupom": null,
+    "linkAfiliado": "https://amzn.to/44H2xWJ",
+    "status": "ativo",
+    "validade": "2026-07-21T05:45:20.390Z",
+    "destaque": true,
+    "vendas": "",
+    "avaliacao": "",
+    "ranking": "",
+    "desconto": "",
+    "scoreCuradoria": "",
+    "observacao": "Preço e disponibilidade podem mudar. Ranking: #26 Avaliação: 4,8 de 5 estrelas",
+    "atualizadoEm": "2026-07-20T17:45:20.741Z",
+    "criadoEm": "2026-07-20T17:45:20.741Z"
+  },
+  {
     "id": "aliexpress-ugreen-65w-universal-travel-adapter-2-usb-c-1-usb--o0fjnl",
     "nome": "UGREEN 65W Universal Travel Adapter 2 USB-C 1 USB-A AC Socket GaN carregador Certified CE FCC...",
     "plataforma": "AliExpress",
